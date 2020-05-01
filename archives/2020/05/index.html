@@ -6,12 +6,12 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Archives: 2020/5 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Day Day Study">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2020&#x2F;05&#x2F;index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Day Day Study">
 <meta property="og:locale" content="en">
@@ -145,369 +145,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Linux 学习（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/01/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">Linux 学习（1）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/01/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/01/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
   	<time datetime="2020-05-01T06:27:58.769Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html><html><head><title>Linux 学习（1）</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
-                        
-                    
-
-
-
-<h1 id="linux-学习1" style="user-select: auto;">Linux 学习（1）</h1>
-
-<p style="user-select: auto;"></p>
-
-<p style="user-select: auto;">整理于2020年5月1日<a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
-
-</p><div><div class="toc" style="user-select: auto;"><div class="toc">
-<ul>
-<li><a href="#linux-学习1">Linux 学习（1）</a><ul>
-<li><ul>
-<li><a href="#基本bash命令">基本bash命令</a><ul>
-<li><a href="#启动bash-shell">启动bash shell</a></li>
-<li><a href="#shell提示符">shell提示符</a></li>
-<li><a href="#shell中的bash手册">shell中的bash手册</a></li>
-<li><a href="#浏览文件系统">浏览文件系统</a></li>
-<li><a href="#遍历目录">遍历目录</a></li>
-<li><a href="#文件和目录列表">文件和目录列表</a><ul>
-<li><a href="#显示长列表">显示长列表</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-
-<h3 id="基本bash命令" style="user-select: auto;">基本bash命令</h3>
-
-
-
-<h4 id="启动bash-shell" style="user-select: auto;">启动bash shell</h4>
-
-<p style="user-select: auto;">GNU bash shell 通常是在用户登录终端启动。登录时，系统启动的shell依赖于用户账户的设置</p>
-
-
-
-<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs awk" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-regexp" style="user-select: auto;">/etc/</span>password <span class="hljs-comment" style="user-select: auto;">#包含所有系统用户账户列表以及每个用户的基本配置信息</span>
-</div></code></pre>
-
-<p style="user-select: auto;">bash shell 自动启动，是否出现shell命令行界面(CLI)依赖于<em style="user-select: auto;">所使用的登录方式</em></p>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">使用虚拟控制台终端登录，CLI提示符$会自动出现 <br style="user-select: auto;">
-  通过图形化桌面环境登录Linux，需使用图形化终端仿真器来访问shell CLI提示符</p>
-</blockquote>
-
-
-
-<h4 id="shell提示符" style="user-select: auto;">shell提示符</h4>
-
-<p style="user-select: auto;">Ubuntu Linux系统shell提示符如下：</p>
-
-
-
-<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs subunit" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">keyong-bio@VM<span class="hljs-string" style="user-select: auto;">-0</span><span class="hljs-string" style="user-select: auto;">-8</span>-ubuntu:$ ##用户ID：keyong-bio 系统名为VM<span class="hljs-string" style="user-select: auto;">-0</span><span class="hljs-string" style="user-select: auto;">-8</span>-ubuntu
-</div></code></pre>
-
-
-
-<h4 id="shell中的bash手册" style="user-select: auto;">shell中的bash手册</h4>
-
-
-
-<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs bash" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">man xterm <span class="hljs-comment" style="user-select: auto;">#可以进去xterm的帮助手册页面（需要阅读第一段的description部分）</span>
-</div><div class="hljs-line" style="user-select: auto;">注意：bash手册不是按部就班的学习指南，而是作为快速参考来使用的。
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;"># bash手册是由分页程序（pager）显示，能够逐页显示文本，通过点击空格键翻页/回车键逐行查看/使用箭头键向前向后滚动手册页内容</span>
-</div><div class="hljs-line" style="user-select: auto;">q <span class="hljs-comment" style="user-select: auto;">#手册页读完点击q键退出</span>
-</div><div class="hljs-line" style="user-select: auto;">man man <span class="hljs-comment" style="user-select: auto;">#man文件自身的参考信息</span>
-</div><div class="hljs-line" style="user-select: auto;">man 1 hostname <span class="hljs-comment" style="user-select: auto;">#查看手册页第一部分内容</span>
-</div><div class="hljs-line" style="user-select: auto;">man 1 intro <span class="hljs-comment" style="user-select: auto;">#阅读第一部分简介</span>
-</div><div class="hljs-line" style="user-select: auto;">hostname -help <span class="hljs-comment" style="user-select: auto;">#查看帮助</span>
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-built_in" style="user-select: auto;">help</span> <span class="hljs-built_in" style="user-select: auto;">help</span> <span class="hljs-comment" style="user-select: auto;">#更多的信息</span>
-</div></code></pre>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">如果不记得命令，使用关键字搜索手册页： man -k terminal（比如查找与终端相关的命令） <br style="user-select: auto;">
-  手册页详解：手册页将命令相关的信息分成不同的节还会有内容区域。<strong style="user-select: auto;">区域号1：9代表不同的内容</strong></p>
-</blockquote>
-
-<p style="user-select: auto;">注意：手册不是唯一的参考内容，还有info页面。使用<strong style="user-select: auto;">info info</strong>来查看info页面的内容</p>
-
-
-
-<h4 id="浏览文件系统" style="user-select: auto;">浏览文件系统</h4>
-
-<p style="user-select: auto;">登录系统获得shell命令提示符时，通常是在主目录。<strong style="user-select: auto;">如何实现浏览主目录以外的内容？</strong></p>
-
-<p style="user-select: auto;">Linux将文件存储在单个目录结构中，称为<code style="user-select: auto;">虚拟目录</code>。虚拟目录将安装在PC上的所有存储设备的文件路径纳入单个目录结构中。只有一个root根目录。<strong style="user-select: auto;">Linux中使用正斜杠/划分目录。反斜杠\用来标识转义字符。</strong> <br style="user-select: auto;">
-Linux上安装的第一块硬盘为<u style="user-select: auto;">根驱动器</u>。其他目录都从<u style="user-select: auto;">根驱动器</u>进行构建。</p>
-
-<p style="user-select: auto;">登录系统之后，会话将<u style="user-select: auto;">从主目录开始</u>，<code style="user-select: auto;">主目录</code>是分配给用户账户的一个特有目录。用户账户在创建之后，系统将会分配一个特有目录</p>
-
-
-
-<h4 id="遍历目录" style="user-select: auto;">遍历目录</h4>
-
-
-
-<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs elixir" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">cd destination <span class="hljs-comment" style="user-select: auto;"># destination分为绝对路径和相对路径</span>
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">#examlple:</span>
-</div><div class="hljs-line" style="user-select: auto;">christine<span class="hljs-variable" style="user-select: auto;">@sever01</span><span class="hljs-symbol" style="user-select: auto;">:~</span><span class="hljs-variable" style="user-select: auto;">$ </span>cd /user/bin <span class="hljs-comment" style="user-select: auto;">#描述绝对路径</span>
-</div><div class="hljs-line" style="user-select: auto;">christine<span class="hljs-variable" style="user-select: auto;">@sever01</span>: <span class="hljs-regexp" style="user-select: auto;">/user/bin</span><span class="hljs-variable" style="user-select: auto;">$</span>
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-variable" style="user-select: auto;"></span>
-</div><div class="hljs-line" style="user-select: auto;">pwd <span class="hljs-comment" style="user-select: auto;">#显示当前目录</span>
-</div><div class="hljs-line" style="user-select: auto;">cd Documents <span class="hljs-comment" style="user-select: auto;"># 直接从home目录切换到Documents子目录</span>
-</div></code></pre>
-
-<p style="user-select: auto;">相对路径：不以代表根目录的正斜线/开头，以<u style="user-select: auto;">目录名或特殊字符</u>开始</p>
-
-<ul style="user-select: auto;"><li style="user-select: auto;"><p style="user-select: auto;">有两个常用的特殊字符：</p>
-
-<ul style="user-select: auto;">
-<li style="user-select: auto;"><p style="user-select: auto;">单点符<code style="user-select: auto;">.</code> 表示当前目录</p></li>
-<li style="user-select: auto;"><p style="user-select: auto;">双点符<code style="user-select: auto;">..</code>表示当前目录的父目录 cd ../</p></li></ul></li>
-</ul>
-
-
-
-<h4 id="文件和目录列表" style="user-select: auto;">文件和目录列表</h4>
-
-
-
-<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs r" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-comment" style="user-select: auto;">#显示当前目录下文件和目录，输出按字母排序，按列排序，ls命令用不同颜色区分不同类型文件</span>
-</div><div class="hljs-line" style="user-select: auto;">ls -<span class="hljs-literal" style="user-select: auto;">F</span> <span class="hljs-comment" style="user-select: auto;"># -F参数区分文件和目录，-F在目录名后加/，在可执行文件后面会有*号</span>
-</div><div class="hljs-line" style="user-select: auto;">ls -a <span class="hljs-comment" style="user-select: auto;"># -a参数会将点号开头的隐藏文件都显示出来，有三个.bash文件时bash shell环境使用的，小白勿动</span>
-</div><div class="hljs-line" style="user-select: auto;">ls -<span class="hljs-literal" style="user-select: auto;">F</span> -R <span class="hljs-comment" style="user-select: auto;"># -R参数递归选项，列出当前目录下包含的子目录中的文件</span>
-</div><div class="hljs-line" style="user-select: auto;">ls -<span class="hljs-literal" style="user-select: auto;">F</span> -R 可以进行合并写成 ls -FR
-</div></code></pre>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">Linux中的文件采用隐藏文件来保存信息。以<u style="user-select: auto;">.（点号）</u>开始</p>
-</blockquote>
-
-
-
-<h5 id="显示长列表" style="user-select: auto;">显示长列表</h5>
-
-
-
-<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs bash" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> <span class="hljs-comment" style="user-select: auto;"># -l参数会产生长列表格式输出，-l参数可以看到系统上任何文件或目录的大部分信息</span>
-</div></code></pre>
-
-<p style="user-select: auto;">注意：可以将<strong style="user-select: auto;">多个参数结合起来使用，比如 ls -alF</strong></p>
-
-<div class="footnotes"><hr><ol><li id="fn:demo">本文是我刚学习Linux时的部分笔记。主要学习《Linux命令行与shell脚本编程大全》，很多命令会忘记，于是绝对把它们搬到博客里来。。。。也方便更多的人可以互相交流学习哈哈哈哈（我是不太会） <a href="#fnref:demo" title="Return to article" class="reversefootnote">↩</a></li></ol></div></div></body></html>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/01/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-常用统计方法学习（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/30/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">常用统计方法学习（1）</a>
+      <a class="archive-article-title" href="/2020/05/01/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">Linux 学习（1）</a>
     </h1>
   
 
-        
-        <a href="/2020/04/30/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-04-30T09:08:53.086Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html><html><head><title>常用统计方法学习（1）</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
-                        
-                    
+        <div class="article-info info-on-right">
+          
+          
 
-
-
-<h1 id="常用统计方法学习1" style="user-select: auto;">常用统计方法学习（1）</h1>
-
-<p style="user-select: auto;"> <br style="user-select: auto;">
-<strong style="user-select: auto;">写于2020年4月30日</strong><a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
-
-</p><div><div class="toc" style="user-select: auto;"><div class="toc">
-<ul>
-<li><a href="#常用统计方法学习1">常用统计方法学习（1）</a><ul>
-<li><a href="#一般线性模型方差分析和线性回归的统一">一般线性模型——方差分析和线性回归的统一</a></li>
-<li><a href="#广义线性模型线性回归与logistic回归的统一">广义线性模型——线性回归与logistic回归的统一</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-
-<h2 id="一般线性模型方差分析和线性回归的统一" style="user-select: auto;">一般线性模型——方差分析和线性回归的统一</h2>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">一般线性模型并不是一个具体的模型，而是多种方法的统称，t检验、方差分析、线性回归都属于一般线性模型。</p>
-</blockquote>
-
-
-
-<p style="user-select: auto;"></p><div class="" rel="bc5bb640fd31fcbb4714d746877e0074" style="user-select: auto;"><div class="MathJax_SVG_Display" role="textbox" aria-readonly="true" style="text-align: center; user-select: auto;"><span style="font-size: 100%; display: inline-block; user-select: auto;" class="MathJax_SVG" id="MathJax-Element-90-Frame"><span><img type="image/png" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;" width="359" height="18"></span></span></div></div>
-<code style="user-select: auto;">y</code>为因变量或结局变量，<code style="user-select: auto;">x1...</code>为自变量或解释变量<p style="user-select: auto;"></p>
-
-<p style="user-select: auto;">在一般线性模型中，因变量<strong style="user-select: auto;">必须是定量的</strong>，而自变量既可以是定量的，也可以是分类的。</p>
-
-<table style="user-select: auto;"><tbody style="user-select: auto;"><tr style="font-weight: bold; user-select: auto;">  <td style="user-select: auto;" align="left">自变量个数及类型</td>  <td style="user-select: auto;" align="right">一般线性模型具体方法</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">1个二分类变量</td>  <td style="user-select: auto;" align="right">t检验</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">1个多分类变量</td>  <td style="user-select: auto;" align="right">方差分析</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">2个或多个分类变量</td>  <td style="user-select: auto;" align="right">多因素方差分析</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">1个连续变量</td>  <td style="user-select: auto;" align="right">单因素线性回归</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">多个连续变量</td>  <td style="user-select: auto;" align="right">多因素线性回归</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">1个连续变量、1个分类变量</td>  <td style="user-select: auto;" align="right">协方差分析</td></tr></tbody></table>
-
-
-
-<h2 id="广义线性模型线性回归与logistic回归的统一" style="user-select: auto;">广义线性模型——线性回归与logistic回归的统一</h2>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">广义线性模型进一步将不同类型的因变量进行统一，使得模型更为广泛。因变量不仅可以是连续型，也可以是分类和计数型</p>
-</blockquote>
-
-
-
-<p style="user-select: auto;"></p><div class="" rel="1989f3fb2dccd38bdfaa011a78213596" style="user-select: auto;"><div class="MathJax_SVG_Display" role="textbox" aria-readonly="true" style="text-align: center; user-select: auto;"><span style="font-size: 100%; display: inline-block; user-select: auto;" class="MathJax_SVG" id="MathJax-Element-91-Frame"><span><img type="image/png" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;" width="383" height="18"></span></span></div></div><p style="user-select: auto;"></p>
-
-<ul style="user-select: auto;"><li style="user-select: auto;"><p style="user-select: auto;">等式左边为连接函数<code style="user-select: auto;">Link function</code></p></li>
-<li style="user-select: auto;"><p style="user-select: auto;"><strong style="user-select: auto;">连接函数</strong>：不是固定的函数，依据因变量的类型及分布不同而变化。</p></li>
-</ul>
-
-<table style="user-select: auto;"><tbody style="user-select: auto;"><tr style="font-weight: bold; user-select: auto;">  <td style="user-select: auto;" align="left">资料类型</td>  <td style="user-select: auto;" align="right">分布</td>  <td style="user-select: auto;" align="center">g(μ)的具体形式</td>  <td style="user-select: auto;">广义线性模型的具体方法</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">连续型资料</td>  <td style="user-select: auto;" align="right">正态分布</td>  <td style="user-select: auto;" align="center">μ</td>  <td style="user-select: auto;">线性回归模型</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">分类资料</td>  <td style="user-select: auto;" align="right">二项分布</td>  <td style="user-select: auto;" align="center"><div class="" rel="e556e328ed8a3e65f12efa6ab888851f" style="user-select: auto;"><div class="MathJax_SVG_Display" role="textbox" aria-readonly="true" style="text-align: center; user-select: auto;"><span style="font-size: 100%; display: inline-block; user-select: auto;" class="MathJax_SVG" id="MathJax-Element-92-Frame"><span><img type="image/png" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;" width="86" height="18"></span></span></div></div></td>  <td style="user-select: auto;">Logistic回归</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">计数资料</td>  <td style="user-select: auto;" align="right">Possion分布</td>  <td style="user-select: auto;" align="center"><div class="" rel="058116f926b5bf35b42e29a3a6b61d50" style="user-select: auto;"><div class="MathJax_SVG_Display" role="textbox" aria-readonly="true" style="text-align: center; user-select: auto;"><span style="font-size: 100%; display: inline-block; user-select: auto;" class="MathJax_SVG" id="MathJax-Element-93-Frame"><span><img type="image/png" longdesc="__SVG__undefined" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAE4AAAAkCAYAAAAnxQwhAAAEZElEQVRoge2av2obQRDGf49wb2A9gdALHPgBVKRLwK1Jb3AZ1MbgzriMIJUJpFBwY7sIEaiIXZiAXSggoxCSYEyK4D+plWJ2ufFqb3dlnc5/yAdXyDc7N/vt3My3e4b/qBQZ0ABWgA7QBQ6AM3OvbjwHNhbkOwN6VDSvHPgN/AUm6jqswvkMyBDCRsCLBT7nk3lGq0qnIwritqp0HEET6AM/WSxpFl1gjLxhleCYgriXVTmNoAmcAL+ohzSLPWSer+Z1lAPXxtkYqXuLRobU0wmLq2shDJE5z7VgGxTZ9rGCoFLQM8/b5X4a0Yp5/mie53+gIK5bTVxBdIBLZMXbNTyvDEfInPfu6qDO+pYh5WCCLNh9ogn8MLGszzo4R1a/rvrWpViklPrSRhbzJeHszJXdLIs/MLF8mWEMINLDTqRfYpMhNaEL7COFte3c30Ay6Bh4Q3ndsNl9Q9oi6TJyFLDrKLtU3wBvzZjLGcZMBebWt2XgnKLj2us7BTE5RXfUV8/zrBWK7E4V2Tq+QcBOE3dNOglrhGP2IgNOCde3lnF+ruxsbcqRrjQANhEyrM2xx1eP8kUqw6KJy9S4CxI7rG3Jbhb5cKJsV5HCOkQIsOO0rPG9VgN1/01KgNRD3IUam6cMeq0GHATsWsr52Pw+MJcme4dwRp1E7vuwaOJAksaOTdqKfVQDQvtTHdRnY3vEdIZqYnzbGb2yr1MCpB7ihmpsdBejU/SKcKvXmTRANuSuvfbn62otbtfJ1E123cRFG4TuJsOIrZUQ14hg9L1m2p+vY7bV/YdGnN4AvIsZa/0WUvBaIFut52sisY6ZcVvWpG7s6yYueqSm61HIWDeQK8rVfsq2TRfh7ViABnUQpyVZsGm59a0ZsNWBl3Vet+uWyZrUZlT2/Dq6anDPGqtHFq7GKTv40/otJGv6yi5VpWviTgJ2Vem44D5X1yNdDDeA9+q3JngUCEZPzmaS/Tiisa3s3oYCLPF9Q3k2v8JPXGzD774tjZCxT281kZTVylkTHGogtr5ZWZMh2bXP7YlmyMchS0IKNHFlWd925jRBCMnMnEJSSydH8JjLTc0GQtYZ050uJmgxAd4YG7tt65mxvuzYVT5TtjcucVeIrrTHTVtmPn3H7gipqbFaajXqJZHs1Ks+QbLiG9PdJDWF3YUYIwK5jBS9P075WOIS57sOTHznzt8HxDftNjmSTmvsV54JcoDn2/6sI3VtSPk5nYV9pa+QVY5lkj2yjglvmD6P0x3w1MRuyemrOAaE1QJI1lptmfzBaNkMbKQOiKCFEJZyLJNTZMdqxNYnh55R1FIXz2aIY5+wqH+QsBJmHLFL0ZF3gf1gdAgsVei3FtgVD6n1RRC3hJShC+73K9udkVHUu7USm6qJy5A6/DXwzEeDHiJpNj33qiRuyfgY8UgzzYcO0jBciaKP23fn8N9ADmH3eESNIBU506cvWoTvzOm/wxMkzYcW8AfRWtfU919UTwINddWeLf8Aarg+plP8UQAAAAAASUVORK5CYII=" style="margin-top:0;margin-bottom:0;" width="39" height="18"></span></span></div></div></td>  <td style="user-select: auto;">Possion回归</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">计数资料</td>  <td style="user-select: auto;" align="right">负二项分布</td>  <td style="user-select: auto;" align="center"><div class="" rel="c786059d2d368610356ed087827f83e3" style="user-select: auto;"><div class="MathJax_SVG_Display" role="textbox" aria-readonly="true" style="text-align: center; user-select: auto;"><span style="font-size: 100%; display: inline-block; user-select: auto;" class="MathJax_SVG" id="MathJax-Element-94-Frame"><span><img type="image/png" longdesc="__SVG__undefined" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAkCAYAAABbj9K9AAAFTklEQVR4nO2csWocSRCGv0eYN1A/gdkHuIWLxQYXCpQKxRY4NAouscCZUHjGjmSDAxsntgLjBQWyAmGQODZYI7Oc4Tgc3El7F88Ftc3Ujnqmu2dnVtLs/DAo2J6e2u5/qv6qrhXEIYkc32GFkAADYAd4AgyB78DmLdjSB55HjH+A2LzdjDmtQB84qGuyBPgT+BtI1XUJmLoeEojdmS37AWPXEKJMEHv3GrTrvsMAn4FP1Bw5DskI87HOiT1IgDfAX/jJsoaQwxLFXh1hypEAvwNjxOPUgrdkG/Csrkk9SIDXwHXAMw+Ar8AR8IOOMLFIgHPEi2/UMeEZ2QYsSxO8IZygj8hc6iYdYaogQTz5iAUlRx+4Yrn6ZXf2zBEiXmNggCkdYargGbJmHxaZZJ9s8YeL2+TFOuIaU6opeENHmKpIEC2TAo+rTrJs/XI8e9YZ1ZS7oSPMIthB1m1KhWiSABcsT79sIiI3JSyFdsHQfsJsq6ssZA/UuEHg3LackiI6MgpaQE5wv/G2uLeHpN/HCEs1HiNxcYR4rJ8Knqe9WVVyGtpPmBHZ9yvbVF0OOY+Y33r5y1jDnqgHHuU+S5BU9lKNSREPYdm8huieq9yYU8ezDFn8XERcG1aLMIcl4zRhziLmf6HuexRj2Ed1oytE9BAv9MVhWIIwdYx4mE9qzJSb3mpPff4+xsgcDB1hLKoSxuqYopfbCZuX572GC7ZmYoVxMvt7QhZjN9SYiWMO/eWGoUY6YOgIY1GVMFqKjENv0iwbecbmC3uHiNdZU2N21RjX8UJHmHA0TZiBuu9fAuWBrr+8LRnXJ9ugCRLzvnHzXEIb7wpvx+rzVyEGFsDQDGGS2dx1XlUP/JomTE/dlxKYYZ1TvsEW+cLeV9ybpOdzZUCaMGWL4IOhGcLszeat8/pS0ZamCWOYX8Onvhvy+sWUjNWp8Bh3Wbmn5ivKgL6reaLzfwVDc4RJa75iNlFj2YTxFmy1fvlcMi4hy5D+Af7AfUSu9cuwYK7Q2oIPhmYIs468HHVeLyvasmzC7Ppu0FlPmZ4IPRn26RcQIoVoJh8Mnei1qEvDeIuoWm+U9Ufowt4FxSLOZlFl6fkLNVe+SBgDQ0cYizqyJO+ZktYbvpRKE6sozun2iLL03B6tp4gArgrDahEm9GgghjC+mtkctN7Q+mWDeVWviXVNsdvSXkiHmnfMk1Gzukw3+WBYLcKUvVy6Uq/PknxpchEHnHDpjQdI3+eWGqeFcdnB1is1zvZY7CNV4HwIOyUT0D2foQXIx9+2E+YKt2zYYf7Fsd59gGSzZTUgrWG966fDzM5s4lNuhhxNrLK0S9dXfib7BYCL5QcxhhZgi3nCLKsHeZnQhEmRUsVLZE23kATiB1mbgtY7Y+ZffBcsB8YEVHlP1ANOkRjm8gahfb7aLV4gYSzf/mCRkDVxx6bWBnjIfP9Oiiya7vltA/KEyV+2cT6fxab42y8NmdQIatXU8esa2bj8YhukojtCQlXZZuiC1zf8KdoHwgS3xjuE2OOZTa5rghQH20AcTZgT4D+y8DQmeyETJOO02Y5rL/Ow+zUlvOmKHuK2quoI13x9wjZLd/ktUsBrMzRhfkPWbJviNf6FsN8cJWruqh2Pt4IB4t2uqfHHVS1CnjB1wZY2jriHnvg5YnzVA7o2ownC2K6DY+4hWSze04UmF+omTB9JYkZE6Ja7iqcI8xdpeWgb6iRMH0mjh8T/aPDOYoBkOJ2nEeh/OLCIOF1HyGfbaluFhOL6zSrBkNVJfDWwkLm6/5/TcvyK1KimiNc1t2pNhzuPfG/x0vE/qSLhcwspjhkAAAAASUVORK5CYII=" style="margin-top:0;margin-bottom:0;" width="70" height="18"></span></span></div></div></td>  <td style="user-select: auto;">负二项回归</td></tr></tbody></table>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;"><strong style="user-select: auto;">Note</strong>:  <br style="user-select: auto;">
-  广义线性模型中的线性指的是：因变量的函数与自变量的关系呈线性关系 <br style="user-select: auto;">
-  广义线性模型的参数估计一般采用<strong style="user-select: auto;">最大似然估计</strong>，回归系数的检验一般是：<strong style="user-select: auto;">Wald检验、似然比检验、score检验</strong></p>
-</blockquote>
-
-<ul style="user-select: auto;"><li style="user-select: auto;"><p style="user-select: auto;">简单讲述一下以上三种检验方法的差别：</p>
-
-<ul style="user-select: auto;">
-<li style="user-select: auto;"><p style="user-select: auto;"><strong style="user-select: auto;">Wald检验</strong>的思路与t检验类似 <br style="user-select: auto;">
-</p><div class="" rel="0ac468b86cb3d3fb7ece4355690d18ef" style="user-select: auto;"><div class="MathJax_SVG_Display" role="textbox" aria-readonly="true" style="text-align: center; user-select: auto;"><span style="font-size: 100%; display: inline-block; user-select: auto;" class="MathJax_SVG" id="MathJax-Element-95-Frame"><span><img type="image/png" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;" width="101" height="16"></span></span></div></div>
-反映回归系数估计值（统计量）与0（参数）的距离，该距离根据标准误进行调整。<em style="user-select: auto;">差值越大，越有理由拒绝二者相等的无效假设</em>，软件一般给出<strong style="user-select: auto;">z^2</strong>, 符合卡方分布。<p style="user-select: auto;"></p></li>
-<li style="user-select: auto;"><p style="user-select: auto;"><strong style="user-select: auto;">似然比检验</strong>：通过比较系数=<code style="user-select: auto;">b</code>和系数=<code style="user-select: auto;">0</code>时的两个对数似然函数来说明参数统计值是否有统计学意义。 <br style="user-select: auto;">
-</p><div class="" rel="70b592689da3ad39f6b6c5912f3d5896" style="user-select: auto;"><div class="MathJax_SVG_Display" role="textbox" aria-readonly="true" style="text-align: center; user-select: auto;"><span style="font-size: 100%; display: inline-block; user-select: auto;" class="MathJax_SVG" id="MathJax-Element-96-Frame"><span><img type="image/png" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;" width="189" height="22"></span></span></div></div>
-L表示似然值，lnL表示对数似然值。该统计量也符合卡方分布。 <br style="user-select: auto;">
-如果模型1有a和b两个变量，模型2有b一个变量，如果两个模型的似然函数差别较大，则说明变量a可能有统计学意义，因为这两个模型的差别仅在于一个变量a。<p style="user-select: auto;"></p></li>
-<li style="user-select: auto;"><p style="user-select: auto;"><strong style="user-select: auto;">得分检验</strong>：计量经济学中称为拉格朗日乘数LM，计算过程是对对数似然函数求导。反映对数似然函数在系数=0时的导数</p></li></ul></li>
-</ul>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">大样本条件下，三种检验方法的结果是一致的；但是小样本时往往会不一致，一般认为<strong style="user-select: auto;">似然比检验</strong>的结果更为可靠。</p>
-</blockquote>
-
-<div class="footnotes"><hr><ol><li id="fn:demo">本文是我在阅读冯国双老师写的《白话统计》一书中的记录。总是会忘记这些知识，于是把它们写在博客中了。我打字真的真的好慢慢慢慢……. <a href="#fnref:demo" title="Return to article" class="reversefootnote">↩</a></li></ol></div></div></body></html>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/30/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
   
+    </div></section>
+  
+
+    
 
 
           </div>
@@ -529,9 +207,9 @@ L表示似然值，lnL表示对数似然值。该统计量也符合卡方分布�
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
