@@ -180,7 +180,6 @@
 </p><div><div class="toc" style="user-select: auto;"><div class="toc">
 <ul>
 <li><a href="#linux-学习1">Linux 学习（1）</a><ul>
-<li><ul>
 <li><a href="#基本bash命令">基本bash命令</a><ul>
 <li><a href="#启动bash-shell">启动bash shell</a></li>
 <li><a href="#shell提示符">shell提示符</a></li>
@@ -196,23 +195,17 @@
 </ul>
 </li>
 </ul>
-</li>
-</ul>
 </div>
 </div>
 </div>
 
 
 
-<h3 id="基本bash命令" style="user-select: auto;">基本bash命令</h3>
+<h2 id="基本bash命令" style="user-select: auto;">基本bash命令</h2>
 
-
-
-<h4 id="启动bash-shell" style="user-select: auto;">启动bash shell</h4>
+<h3 id="启动bash-shell" style="user-select: auto;">启动bash shell</h3>
 
 <p style="user-select: auto;">GNU bash shell 通常是在用户登录终端启动。登录时，系统启动的shell依赖于用户账户的设置</p>
-
-
 
 <pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs awk" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-regexp" style="user-select: auto;">/etc/</span>password <span class="hljs-comment" style="user-select: auto;">#包含所有系统用户账户列表以及每个用户的基本配置信息</span>
 </div></code></pre>
@@ -226,20 +219,16 @@
 
 
 
-<h4 id="shell提示符" style="user-select: auto;">shell提示符</h4>
+<h3 id="shell提示符" style="user-select: auto;">shell提示符</h3>
 
 <p style="user-select: auto;">Ubuntu Linux系统shell提示符如下：</p>
-
-
 
 <pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs subunit" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">keyong-bio@VM<span class="hljs-string" style="user-select: auto;">-0</span><span class="hljs-string" style="user-select: auto;">-8</span>-ubuntu:$ ##用户ID：keyong-bio 系统名为VM<span class="hljs-string" style="user-select: auto;">-0</span><span class="hljs-string" style="user-select: auto;">-8</span>-ubuntu
 </div></code></pre>
 
 
 
-<h4 id="shell中的bash手册" style="user-select: auto;">shell中的bash手册</h4>
-
-
+<h3 id="shell中的bash手册" style="user-select: auto;">shell中的bash手册</h3>
 
 <pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs bash" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">man xterm <span class="hljs-comment" style="user-select: auto;">#可以进去xterm的帮助手册页面（需要阅读第一段的description部分）</span>
 </div><div class="hljs-line" style="user-select: auto;">注意：bash手册不是按部就班的学习指南，而是作为快速参考来使用的。
@@ -261,7 +250,7 @@
 
 
 
-<h4 id="浏览文件系统" style="user-select: auto;">浏览文件系统</h4>
+<h3 id="浏览文件系统" style="user-select: auto;">浏览文件系统</h3>
 
 <p style="user-select: auto;">登录系统获得shell命令提示符时，通常是在主目录。<strong style="user-select: auto;">如何实现浏览主目录以外的内容？</strong></p>
 
@@ -270,11 +259,7 @@ Linux上安装的第一块硬盘为<u style="user-select: auto;">根驱动器</u
 
 <p style="user-select: auto;">登录系统之后，会话将<u style="user-select: auto;">从主目录开始</u>，<code style="user-select: auto;">主目录</code>是分配给用户账户的一个特有目录。用户账户在创建之后，系统将会分配一个特有目录</p>
 
-
-
-<h4 id="遍历目录" style="user-select: auto;">遍历目录</h4>
-
-
+<h3 id="遍历目录" style="user-select: auto;">遍历目录</h3>
 
 <pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs elixir" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">cd destination <span class="hljs-comment" style="user-select: auto;"># destination分为绝对路径和相对路径</span>
 </div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">#examlple:</span>
@@ -296,9 +281,7 @@ Linux上安装的第一块硬盘为<u style="user-select: auto;">根驱动器</u
 
 
 
-<h4 id="文件和目录列表" style="user-select: auto;">文件和目录列表</h4>
-
-
+<h3 id="文件和目录列表" style="user-select: auto;">文件和目录列表</h3>
 
 <pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs r" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-comment" style="user-select: auto;">#显示当前目录下文件和目录，输出按字母排序，按列排序，ls命令用不同颜色区分不同类型文件</span>
 </div><div class="hljs-line" style="user-select: auto;">ls -<span class="hljs-literal" style="user-select: auto;">F</span> <span class="hljs-comment" style="user-select: auto;"># -F参数区分文件和目录，-F在目录名后加/，在可执行文件后面会有*号</span>
@@ -313,16 +296,14 @@ Linux上安装的第一块硬盘为<u style="user-select: auto;">根驱动器</u
 
 
 
-<h5 id="显示长列表" style="user-select: auto;">显示长列表</h5>
-
-
+<h4 id="显示长列表" style="user-select: auto;">显示长列表</h4>
 
 <pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs bash" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> <span class="hljs-comment" style="user-select: auto;"># -l参数会产生长列表格式输出，-l参数可以看到系统上任何文件或目录的大部分信息</span>
 </div></code></pre>
 
 <p style="user-select: auto;">注意：可以将<strong style="user-select: auto;">多个参数结合起来使用，比如 ls -alF</strong></p>
 
-<div class="footnotes"><hr><ol><li id="fn:demo">本文是我刚学习Linux时的部分笔记。主要学习《Linux命令行与shell脚本编程大全》，很多命令会忘记，于是绝对把它们搬到博客里来。。。。也方便更多的人可以互相交流学习哈哈哈哈（我是不太会） <a href="#fnref:demo" title="Return to article" class="reversefootnote">↩</a></li></ol></div></div></body></html>
+<div class="footnotes"><hr><ol><li id="fn:demo">本文是我刚学习Linux时的部分笔记。主要学习《Linux命令行与shell脚本编程大全》，很多命令会忘记，于是决定把它们搬到博客里来。。。。也方便更多的人可以互相交流学习哈哈哈哈（我是不太会） <a href="#fnref:demo" title="Return to article" class="reversefootnote">↩</a></li></ol></div></div></body></html>
       
 
       
