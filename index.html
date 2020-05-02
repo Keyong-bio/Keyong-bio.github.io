@@ -145,6 +145,191 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux学习（2）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/02/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/">Linux学习（2）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/02/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-05-02T14:50:47.838Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html><html><head><title>Linux学习（2）</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="linux学习2" style="user-select: auto;">Linux学习（2）</h1>
+
+<p style="user-select: auto;">整理于2020年5月2日<a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
+
+</p><div><div class="toc" style="user-select: auto;"><div class="toc">
+<ul>
+<li><a href="#linux学习2">Linux学习（2）</a><ul>
+<li><a href="#过滤输出列表">过滤输出列表</a></li>
+<li><a href="#处理文件">处理文件</a><ul>
+<li><a href="#创建文件">创建文件</a></li>
+<li><a href="#复制文件">复制文件</a></li>
+<li><a href="#链接文件">链接文件</a></li>
+<li><a href="#重命名文件">重命名文件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h2 id="过滤输出列表" style="user-select: auto;">过滤输出列表</h2>
+
+<p style="user-select: auto;"><code style="user-select: auto;">ls</code>命令可使用过滤器来决定应该在输出中显示哪些文件或目录。过滤器就是一个进行简单文本匹配的字符串，添加在命令行参数之后。</p>
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs bash" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> <span class="hljs-comment" style="user-select: auto;"># -l指的是using a long listing format</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_script <span class="hljs-comment" style="user-select: auto;"># 不知道要找文件确切名称时，ls命令能够识别标准通配符，并在过滤器中用它们进行模式匹配</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">##？问号代表一个字符，可用于过滤器字符串中替代任意位置的单个字符</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_scr?pt
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">##* 星号代表零个或多个字符</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my*
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">###[] 使用中括号</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_scr[ai]pt<span class="hljs-comment" style="user-select: auto;">#使用[]以及特定位置上可能出现的两种字符a和i,可以列出字符位置上的多个可能选择</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_scr[a-i]pt
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_f[a-i]ll <span class="hljs-comment" style="user-select: auto;">#会查找出a到i的文件</span>
+</div></code></pre>
+
+<p style="user-select: auto;">过滤器中使用星号和问号被称为文件扩展匹配file globbing。<u style="user-select: auto;">使用通配符进行模式匹配过程。通配符叫做元字符通配符</u></p>
+
+
+
+<h2 id="处理文件" style="user-select: auto;">处理文件</h2>
+
+<h3 id="创建文件" style="user-select: auto;">创建文件</h3>
+
+<p style="user-select: auto;"><u style="user-select: auto;">touch命令创建空文件。</u>touch命令还可以用来改变文件的修改时间，此操作不需要改变文件的内容</p>
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs bash" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">touch test_one
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> test_one <span class="hljs-comment" style="user-select: auto;">#创建test_one空文件</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">##再进行一次touch test_one，test_one文件的修改时间就会更新</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> test_one
+</div><div class="hljs-line" style="user-select: auto;">touch <span class="hljs-_" style="user-select: auto;">-a</span> test_one <span class="hljs-comment" style="user-select: auto;">#更改访问时间</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> --time=atime test_one <span class="hljs-comment" style="user-select: auto;">#参数--time=atime能够显示出更改过的文件访问时间。</span>
+</div></code></pre>
+
+
+
+<h3 id="复制文件" style="user-select: auto;">复制文件</h3>
+
+<p style="user-select: auto;"><code style="user-select: auto;">cp</code>命令可以完成复制，需要两个参数——源对象和目标对象</p>
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs avrasm" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cp</span> source destination
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-meta" style="user-select: auto;">#当source和destination参数都是文件名时，cp命令将源文件复制成一个新文件，并且以destination命名</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cp</span> test_one test_two 
+</div><div class="hljs-line" style="user-select: auto;">ls -l test_*<span class="hljs-meta" style="user-select: auto;">#新文件test_one和test_two的修改时间不一样</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cp</span> -i test_one test_two <span class="hljs-meta" style="user-select: auto;">#加上-i选项，强制shell询问是否需要覆盖已有文件</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cp</span> -i test_one /home/christine/Documents/ <span class="hljs-meta" style="user-select: auto;">#使用绝对路径,将文件复制到现有目录中</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cp</span> -i test_one Documents/ <span class="hljs-meta" style="user-select: auto;">#使用相对路径,将文件复制到现有目录中</span>
+</div><div class="hljs-line" style="user-select: auto;">ls -i Documents
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cp</span> -R <span class="hljs-meta" style="user-select: auto;">#可在一条命令中递归地复制整个目录内容</span>
+</div><div class="hljs-line" style="user-select: auto;">ls -d <span class="hljs-meta" style="user-select: auto;"># -d参数：只列出目录本身的信息，不列出其中内容</span>
+</div></code></pre>
+
+<p style="user-select: auto;">特殊字符可以用在相对文件路径中。使用单点符<code style="user-select: auto;">.</code>适用于<code style="user-select: auto;">cp</code>命令。如需要将一个带有很长源对象名的文件复制到当前工作目录中，<strong style="user-select: auto;">单点符</strong>能简化任务。</p>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs vim" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-built_in" style="user-select: auto;">mkdir</span> sci #在目录下生成sci的文件夹
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cd</span> sci/ #进入sci文件夹
+</div><div class="hljs-line" style="user-select: auto;">touch <span class="hljs-keyword" style="user-select: auto;">me</span>.txt #生成<span class="hljs-keyword" style="user-select: auto;">me</span>.txt的文件
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">vi</span> <span class="hljs-keyword" style="user-select: auto;">me</span>.txt #修改<span class="hljs-keyword" style="user-select: auto;">me</span>.txt，然后按i进行编辑，输入内容后，先按ESC，再按shift+`:`,输入<span class="hljs-keyword" style="user-select: auto;">wq</span>进行保存
+</div></code></pre>
+
+<blockquote style="user-select: auto;">
+  <p style="user-select: auto;">学会使用制表键进行补全<strong style="user-select: auto;">Tab</strong></p>
+</blockquote>
+
+
+
+<h3 id="链接文件" style="user-select: auto;">链接文件</h3>
+
+<p style="user-select: auto;">保存一份物理文件副本和多个虚拟副本的方法。链接是目录中指向文件真实位置的占位符。Linux中有两种不同类型的文件链接（<strong style="user-select: auto;">符号链接，硬链接</strong>）</p>
+
+<p style="user-select: auto;">符号链接是一个实实在在的文件，指向存放在虚拟目录结构中某个地方的另一个文件。这两个通过符号链接在一起的文件，彼此内容并不相同。</p>
+
+<p style="user-select: auto;">创建符号链接，原始文件必须事先存在，可以使用<code style="user-select: auto;">ln</code>命令以及<code style="user-select: auto;">-s</code>选项来创建</p>
+
+<p style="user-select: auto;">证明链接文件是独立文件的方法：<u style="user-select: auto;">1. 看两个文件字节大小 2.查看数据文件inode编号</u></p>
+
+<p style="user-select: auto;">ls命令加入-i参数：可以查看inode编号</p>
+
+<p style="user-select: auto;">硬链接会创建独立的 虚拟文件，根本上而言是同一个文件。直接使用ln命令，不用加入额外命令参数</p>
+
+<h3 id="重命名文件" style="user-select: auto;">重命名文件</h3>
+
+<p style="user-select: auto;">Linux中重命名文件称为移动（moving）, <code style="user-select: auto;">mv</code>命令可以将文件和目录移动到另一个位置或重新命名。</p>
+
+<blockquote style="user-select: auto;">
+  <p style="user-select: auto;">mv命令只会修改名字，不会改变inode号以及时间戳</p>
+</blockquote>
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs css" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-selector-tag" style="user-select: auto;">mv</span> <span class="hljs-selector-tag" style="user-select: auto;">mi</span><span class="hljs-selector-class" style="user-select: auto;">.txt</span> <span class="hljs-selector-tag" style="user-select: auto;">me2</span><span class="hljs-selector-class" style="user-select: auto;">.txt</span> #将<span class="hljs-selector-tag" style="user-select: auto;">mi</span><span class="hljs-selector-class" style="user-select: auto;">.txt</span>文件名改为<span class="hljs-selector-tag" style="user-select: auto;">me2</span><span class="hljs-selector-class" style="user-select: auto;">.txt</span>; <span class="hljs-selector-tag" style="user-select: auto;">mv</span>命令可移动文件的位置
+</div></code></pre>
+
+<div class="footnotes"><hr><ol><li id="fn:demo">本文是我刚学习Linux时的部分笔记。主要学习《Linux命令行与shell脚本编程大全》，很多命令会忘记，于是决定把它们搬到博客里来。。。。也方便更多的人可以互相交流学习哈哈哈哈，我发现很多原来是真忘了。 <a href="#fnref:demo" title="Return to article" class="reversefootnote">↩</a></li></ol></div></div></body></html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/02/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Linux 学习（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
