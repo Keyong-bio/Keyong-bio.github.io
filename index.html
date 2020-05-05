@@ -145,6 +145,116 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux学习 (3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/">Linux学习 (3)</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/" class="archive-article-date">
+  	<time datetime="2020-05-05T14:07:25.126Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html><html><head><title>Linux学习(3)</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="linux学习3" style="user-select: auto;">Linux学习(3)</h1>
+
+<p style="user-select: auto;"></p>
+
+<p style="user-select: auto;">整理于2020年5月5日</p>
+
+<div><div class="toc" style="user-select: auto;"><div class="toc">
+<ul>
+<li><a href="#linux学习3">Linux学习(3)</a><ul>
+<li><a href="#linux处理数据文件">Linux处理数据文件</a><ul>
+<li><a href="#排序sort命令">排序：sort命令</a></li>
+<li><a href="#搜索文件-grep">搜索文件: grep</a></li>
+<li><a href="#压缩数据">压缩数据</a></li>
+<li><a href="#归档数据">归档数据</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 id="linux处理数据文件" style="user-select: auto;">Linux处理数据文件</h2>
+
+
+
+<h3 id="排序sort命令" style="user-select: auto;">排序：sort命令</h3>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs stata" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cat</span> file1 #查看file1: <span class="hljs-keyword" style="user-select: auto;">one</span> <span class="hljs-keyword" style="user-select: auto;">two</span> three four five
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">sort</span> file1 #five four <span class="hljs-keyword" style="user-select: auto;">one</span> three <span class="hljs-keyword" style="user-select: auto;">two</span>
+</div><div class="hljs-line" style="user-select: auto;">#默认情况下<span class="hljs-keyword" style="user-select: auto;">sort</span>命令会把数字当作字符执行标准的字符排序，需要加上-<span class="hljs-keyword" style="user-select: auto;">n</span>参数
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">sort</span> -<span class="hljs-keyword" style="user-select: auto;">n</span> file1 #<span class="hljs-keyword" style="user-select: auto;">sort</span>命令会把数字识别成数字而不是字符
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">sort</span> -<span class="hljs-keyword" style="user-select: auto;">M</span> file3 #含有时间戳的文件，-<span class="hljs-keyword" style="user-select: auto;">M</span>表示用三字符月份名按月份排序
+</div><div class="hljs-line" style="user-select: auto;">#<span class="hljs-keyword" style="user-select: auto;">sort</span>还有很多的参数：具体参考书籍
+</div><div class="hljs-line" style="user-select: auto;">du -<span class="hljs-keyword" style="user-select: auto;">sh</span> * | <span class="hljs-keyword" style="user-select: auto;">sort</span> -nr
+</div><div class="hljs-line" style="user-select: auto;">#-r参数指的是按照降序排列；|命令是将du命令输出重新定向到<span class="hljs-keyword" style="user-select: auto;">sort</span>命令
+</div></code></pre>
+        
+          <a class="article-more-a" href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Linux学习（2）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     

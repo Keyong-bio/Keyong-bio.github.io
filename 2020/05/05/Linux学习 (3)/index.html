@@ -6,15 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/5 | keyongbio</title>
+  <title>Linux学习 (3) | keyongbio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Day Day Study">
-<meta property="og:type" content="website">
-<meta property="og:title" content="keyongbio">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2020&#x2F;05&#x2F;index.html">
+  <meta name="description" content="Linux学习(3)                                                  Linux学习(3)    整理于2020年5月5日    Linux学习(3) Linux处理数据文件 排序：sort命令 搜索文件: grep 压缩数据 归档数据          Linux处理数据文件    排序：sort命令    cat file1 #查看file1:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux学习 (3)">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;05&#x2F;Linux%E5%AD%A6%E4%B9%A0%20(3)&#x2F;index.html">
 <meta property="og:site_name" content="keyongbio">
-<meta property="og:description" content="Day Day Study">
+<meta property="og:description" content="Linux学习(3)                                                  Linux学习(3)    整理于2020年5月5日    Linux学习(3) Linux处理数据文件 排序：sort命令 搜索文件: grep 压缩数据 归档数据          Linux处理数据文件    排序：sort命令    cat file1 #查看file1:">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-05T14:07:51.783Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="keyongbio" type="application/atom+xml">
@@ -143,157 +144,228 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-Linux学习 (3)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      Linux学习 (3)
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/" class="archive-article-date">
+
+        
+        <a href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/" class="archive-article-date">
   	<time datetime="2020-05-05T14:07:25.126Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/">Linux学习 (3)</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html><html><head><title>Linux学习(3)</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
 
-        <div class="article-info info-on-right">
-          
-          
 
+
+<h1 id="linux学习3" style="user-select: auto;">Linux学习(3)</h1>
+
+<p style="user-select: auto;"></p>
+
+<p style="user-select: auto;">整理于2020年5月5日</p>
+
+<div><div class="toc" style="user-select: auto;"><div class="toc">
+<ul>
+<li><a href="#linux学习3">Linux学习(3)</a><ul>
+<li><a href="#linux处理数据文件">Linux处理数据文件</a><ul>
+<li><a href="#排序sort命令">排序：sort命令</a></li>
+<li><a href="#搜索文件-grep">搜索文件: grep</a></li>
+<li><a href="#压缩数据">压缩数据</a></li>
+<li><a href="#归档数据">归档数据</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<h2 id="linux处理数据文件" style="user-select: auto;">Linux处理数据文件</h2>
+
+
+
+<h3 id="排序sort命令" style="user-select: auto;">排序：sort命令</h3>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs stata" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cat</span> file1 #查看file1: <span class="hljs-keyword" style="user-select: auto;">one</span> <span class="hljs-keyword" style="user-select: auto;">two</span> three four five
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">sort</span> file1 #five four <span class="hljs-keyword" style="user-select: auto;">one</span> three <span class="hljs-keyword" style="user-select: auto;">two</span>
+</div><div class="hljs-line" style="user-select: auto;">#默认情况下<span class="hljs-keyword" style="user-select: auto;">sort</span>命令会把数字当作字符执行标准的字符排序，需要加上-<span class="hljs-keyword" style="user-select: auto;">n</span>参数
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">sort</span> -<span class="hljs-keyword" style="user-select: auto;">n</span> file1 #<span class="hljs-keyword" style="user-select: auto;">sort</span>命令会把数字识别成数字而不是字符
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">sort</span> -<span class="hljs-keyword" style="user-select: auto;">M</span> file3 #含有时间戳的文件，-<span class="hljs-keyword" style="user-select: auto;">M</span>表示用三字符月份名按月份排序
+</div><div class="hljs-line" style="user-select: auto;">#<span class="hljs-keyword" style="user-select: auto;">sort</span>还有很多的参数：具体参考书籍
+</div><div class="hljs-line" style="user-select: auto;">du -<span class="hljs-keyword" style="user-select: auto;">sh</span> * | <span class="hljs-keyword" style="user-select: auto;">sort</span> -nr
+</div><div class="hljs-line" style="user-select: auto;">#-r参数指的是按照降序排列；|命令是将du命令输出重新定向到<span class="hljs-keyword" style="user-select: auto;">sort</span>命令
+</div></code></pre>
+
+<a id="more"></a>
+
+
+
+<h3 id="搜索文件-grep" style="user-select: auto;">搜索文件: grep</h3>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs perl" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">grep</span> [options] pattern [file]
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">#grep命令会在输入或指定的文件中查找包含匹配指定模式的字符的行。grep输出的就是包含了匹配模式的行</span>
+</div><div class="hljs-line" style="user-select: auto;"><wbr style="user-select: auto;">
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">grep</span> three file1 <span class="hljs-comment" style="user-select: auto;">#从file1中搜索能够匹配模式three的文本 </span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">grep</span> t file1 <span class="hljs-comment" style="user-select: auto;">#从file中搜索能匹配模式t的文本</span>
+</div><div class="hljs-line" style="user-select: auto;"><wbr style="user-select: auto;">
+</div><div class="hljs-line" style="user-select: auto;"><wbr style="user-select: auto;">
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">#记得查看grep的帮助文档</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">grep</span> -v t file1 <span class="hljs-comment" style="user-select: auto;">#进行反向搜索</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">grep</span> -n t file1 <span class="hljs-comment" style="user-select: auto;">#显示匹配模式的行所在的行号</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">grep</span> -c t file1 <span class="hljs-comment" style="user-select: auto;">#知道有多少行含有匹配的模式，-c函数</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">grep</span> -e t -e f file1 <span class="hljs-comment" style="user-select: auto;">#指定多个匹配模式，输出t和f字符所在行</span>
+</div></code></pre>
+
+
+
+<h3 id="压缩数据" style="user-select: auto;">压缩数据</h3>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs applescript" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">gzip<span class="hljs-comment" style="user-select: auto;">#用来压缩文件</span>
+</div><div class="hljs-line" style="user-select: auto;">gzcat<span class="hljs-comment" style="user-select: auto;">#查看压缩过文本文件的内容</span>
+</div><div class="hljs-line" style="user-select: auto;">gunzip<span class="hljs-comment" style="user-select: auto;">#解压文件</span>
+</div><div class="hljs-line" style="user-select: auto;">gzip <span class="hljs-keyword" style="user-select: auto;">my</span>* <span class="hljs-comment" style="user-select: auto;">#使用通配符一次性批量压缩文件</span>
+</div></code></pre>
+
+
+
+<h3 id="归档数据" style="user-select: auto;">归档数据</h3>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs vala" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-meta" style="user-select: auto;">#tar命令</span>
+</div><div class="hljs-line" style="user-select: auto;">tar -cvf test.tar test/test2/
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-meta" style="user-select: auto;">#创建test.tar的归档文件，含有test和test2目录内容</span>
+</div><div class="hljs-line" style="user-select: auto;">tar -tf test.tar
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-meta" style="user-select: auto;">#列出tar文件中内容，只是显示</span>
+</div><div class="hljs-line" style="user-select: auto;">tar -xvf test.tar
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-meta" style="user-select: auto;">#可以提取test.tar中内容</span>
+</div></code></pre></div></body></html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:11:33.930Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux学习（2）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/">Linux学习（2）</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:11:10.538Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">Linux 学习（1）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:10:51.811Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">常用统计方法学习（1）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:02:50.690Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/">什么是参数估计？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -317,8 +389,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
