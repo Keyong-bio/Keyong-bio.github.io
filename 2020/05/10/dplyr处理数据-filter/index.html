@@ -6,15 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>keyongbio</title>
+  <title>dplyr处理数据-filter | keyongbio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Day Day Study">
-<meta property="og:type" content="website">
-<meta property="og:title" content="keyongbio">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;index.html">
+  <meta name="description" content="dplyr处理数据  &#x2F;*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org&#x2F;license *&#x2F; !function(a,b){&quot;object&quot;==typeof module&amp;&amp;&quot;object&quot;==typeof module.exports?module.exports=a.do">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dplyr处理数据-filter">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;10&#x2F;dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter&#x2F;index.html">
 <meta property="og:site_name" content="keyongbio">
-<meta property="og:description" content="Day Day Study">
+<meta property="og:description" content="dplyr处理数据  &#x2F;*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org&#x2F;license *&#x2F; !function(a,b){&quot;object&quot;==typeof module&amp;&amp;&quot;object&quot;==typeof module.exports?module.exports=a.do">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-09T16:55:44.461Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="keyongbio" type="application/atom+xml">
@@ -143,16 +144,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-dplyr处理数据-filter" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-dplyr处理数据-filter" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter/">dplyr处理数据-filter</a>
+    <h1 class="article-title" itemprop="name">
+      dplyr处理数据-filter
     </h1>
   
 
@@ -550,109 +549,171 @@ library(tidyverse)</code></pre>
 ## x dplyr::lag()    masks stats::lag()</code></pre>
 <pre class="r"><code>#flight数据集</code></pre>
 <p>如果在加载dplyr包后使用这些函数的基础版本，那么应该使用完整名称，stats::filter()及stats::lg()</p>
-<p><strong>note</strong>: flight数据集输出的差别在于它是一个<code>tibble</code>。它也是一种数据框，只是进行了小小的修改，更适合tidyverse包使用。 列名下面有一行字母的缩写，描述每个变量的类型。
-        
-          <a class="article-more-a" href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-R语言学习-循环函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/08/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E5%BE%AA%E7%8E%AF%E5%87%BD%E6%95%B0/">R语言学习-循环函数</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/08/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E5%BE%AA%E7%8E%AF%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-05-08T07:54:05.457Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html><html><head><title>R语言学习-循环函数</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
-                        
-                    
-
-
-
-<h1 id="r语言学习-循环函数" style="user-select: auto;">R语言学习-循环函数</h1>
-
-<p style="user-select: auto;">学习于2020年5月8日<a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
-
-</p><div><div class="toc" style="user-select: auto;"><div class="toc">
-<ul>
-<li><a href="#r语言学习-循环函数">R语言学习-循环函数</a><ul>
-<li><a href="#lapply">lapply()</a></li>
-<li><a href="#sapply">sapply()</a></li>
-<li><a href="#apply">apply()</a></li>
-<li><a href="#mapply">mapply()</a></li>
-<li><a href="#tapply">tapply()</a></li>
-<li><a href="#split">split()</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<p style="user-select: auto;">R中主要循环函数：</p>
-
-
-
-<h2 id="lapply" style="user-select: auto;">lapply()</h2>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">lapply()对列表中每个元素，包括各种类型的对象（向量、矩阵、数据框等），运用函数，<strong style="user-select: auto;">返回一个新的列表</strong></p>
+<p><strong>note</strong>: flight数据集输出的差别在于它是一个<code>tibble</code>。它也是一种数据框，只是进行了小小的修改，更适合tidyverse包使用。 列名下面有一行字母的缩写，描述每个变量的类型。 <a id="more"></a></p>
+<blockquote>
+<p>int表示整数型;dbl表示双精度浮点数型变量(实数);chr表示字符串;dttm表示日期时间型变量;lgl逻辑型变量;fctr表示因子(分类变量);date为日期型变量</p>
 </blockquote>
-        
-          <a class="article-more-a" href="/2020/05/08/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E5%BE%AA%E7%8E%AF%E5%87%BD%E6%95%B0/#more">more >></a>
-        
+</div>
+<div id="dplyr基础" class="section level2">
+<h2>dplyr基础</h2>
+<p>-按值筛选观测(filter()) -对行进行重新排序(arrange()) -按名称选取变量(select()) -使用现有变量的函数创建新变量(mutate()) -将多个值总结为一个摘要统计量(summarize()) 这些函数都可以与groub_by函数联合使用。</p>
+</div>
+<div id="filter函数筛选行" class="section level2">
+<h2>filter()函数筛选行</h2>
+<p>第一个参数是数据框名称，第二个参数以及随后的参数用来筛选数据框的表达式</p>
+<pre class="r"><code>jan1 &lt;-filter(flights, month == 1, day == 1)
+#同时完成赋值和输出操作，加上括号()
+(dec25 &lt;- filter(flights, month == 12, day == 25))</code></pre>
+<pre><code>## # A tibble: 719 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+##  1  2013    12    25      456            500        -4      649            651
+##  2  2013    12    25      524            515         9      805            814
+##  3  2013    12    25      542            540         2      832            850
+##  4  2013    12    25      546            550        -4     1022           1027
+##  5  2013    12    25      556            600        -4      730            745
+##  6  2013    12    25      557            600        -3      743            752
+##  7  2013    12    25      557            600        -3      818            831
+##  8  2013    12    25      559            600        -1      855            856
+##  9  2013    12    25      559            600        -1      849            855
+## 10  2013    12    25      600            600         0      850            846
+## # ... with 709 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
+## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
+## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+</div>
+<div id="比较运算符" class="section level2">
+<h2>比较运算符</h2>
+<pre class="r"><code>#使用==进行比较时，会遇到一个问题：浮点数
+
+sqrt(2)^2 == 2</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>1/49 * 49 == 1</code></pre>
+<pre><code>## [1] FALSE</code></pre>
+<pre class="r"><code>#计算机使用有限精度运算，记住每个数值都是一个近似值。比较浮点数是否相等，不能使用==，而使用near()
+near(sqrt(2)^2, 2)#返回true</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<pre class="r"><code>near(1/49 * 49,1)#返回true</code></pre>
+<pre><code>## [1] TRUE</code></pre>
+</div>
+<div id="逻辑运算符" class="section level2">
+<h2>逻辑运算符</h2>
+<p>filter()中多个参数使用<code>与</code>组合起来，每个表达式都要为<strong>真</strong>才能让一行观测b包含在输出中。 x %in% y: 选取出x是y中的一个值时的所有行 可以使用<code>德摩根</code>定律将复杂的筛选条件进行简化： &gt;!(x &amp; y) 等价于 !x | !y &gt;!(x | y) 等价于 !x &amp; !y</p>
+<pre class="r"><code>nov_dec &lt;- filter(flights, month %in% c(11,12))
+
+#找出延误时间不少于2小时的航班
+filter(flights, !(arr_delay &gt; 120 | dep_delay &gt; 120))</code></pre>
+<pre><code>## # A tibble: 316,050 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+##  1  2013     1     1      517            515         2      830            819
+##  2  2013     1     1      533            529         4      850            830
+##  3  2013     1     1      542            540         2      923            850
+##  4  2013     1     1      544            545        -1     1004           1022
+##  5  2013     1     1      554            600        -6      812            837
+##  6  2013     1     1      554            558        -4      740            728
+##  7  2013     1     1      555            600        -5      913            854
+##  8  2013     1     1      557            600        -3      709            723
+##  9  2013     1     1      557            600        -3      838            846
+## 10  2013     1     1      558            600        -2      753            745
+## # ... with 316,040 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
+## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
+## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<pre class="r"><code>filter(flights, arr_delay &lt;= 120, dep_delay &lt;= 120)</code></pre>
+<pre><code>## # A tibble: 316,050 x 19
+##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
+##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
+##  1  2013     1     1      517            515         2      830            819
+##  2  2013     1     1      533            529         4      850            830
+##  3  2013     1     1      542            540         2      923            850
+##  4  2013     1     1      544            545        -1     1004           1022
+##  5  2013     1     1      554            600        -6      812            837
+##  6  2013     1     1      554            558        -4      740            728
+##  7  2013     1     1      555            600        -5      913            854
+##  8  2013     1     1      557            600        -3      709            723
+##  9  2013     1     1      557            600        -3      838            846
+## 10  2013     1     1      558            600        -2      753            745
+## # ... with 316,040 more rows, and 11 more variables: arr_delay &lt;dbl&gt;,
+## #   carrier &lt;chr&gt;, flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;,
+## #   air_time &lt;dbl&gt;, distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;</code></pre>
+<p><strong>note</strong>: filter()函数使用的是复杂的、包含多个部分的表达式，需要考虑用一个明确的变量来代替它</p>
+</div>
+<div id="缺失值na" class="section level2">
+<h2>缺失值NA</h2>
+<p>如果运算中包含缺失值，一般结果也是一个未知值</p>
+<pre class="r"><code>NA == NA</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>#为啥结果是NA
+#令x为Mary的年龄，不知道她多大
+x &lt;- NA
+#令y为John的年龄，不知道她多大
+y &lt;- NA
+x == y</code></pre>
+<pre><code>## [1] NA</code></pre>
+<pre class="r"><code>is.na(x) </code></pre>
+<pre><code>## [1] TRUE</code></pre>
+<p>filter()只能筛选条件为True的行，排除那些条件为FALSE和NA，如果需要保留缺失值，可以明确指出</p>
+<pre class="r"><code>df &lt;- tibble(x = c(1, NA, 3))
+filter(df, x &gt; 1)</code></pre>
+<pre><code>## # A tibble: 1 x 1
+##       x
+##   &lt;dbl&gt;
+## 1     3</code></pre>
+<pre class="r"><code>filter(df, is.na(x) | x &gt; 1)</code></pre>
+<pre><code>## # A tibble: 2 x 1
+##       x
+##   &lt;dbl&gt;
+## 1    NA
+## 2     3</code></pre>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
+
       
 
       
@@ -663,16 +724,75 @@ library(tidyverse)</code></pre>
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/08/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E5%BE%AA%E7%8E%AF%E5%87%BD%E6%95%B0/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/08/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E5%BE%AA%E7%8E%AF%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">R语言学习-循环函数</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -692,565 +812,14 @@ library(tidyverse)</code></pre>
 
 
 
-
   
-    <article id="post-Linux学习 (3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/">Linux学习 (3)</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/" class="archive-article-date">
-  	<time datetime="2020-05-05T14:07:25.126Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html><html><head><title>Linux学习(3)</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
-                        
-                    
-
-
-
-<h1 id="linux学习3" style="user-select: auto;">Linux学习(3)</h1>
-
-<p style="user-select: auto;"></p>
-
-<p style="user-select: auto;">整理于2020年5月5日</p>
-
-<div><div class="toc" style="user-select: auto;"><div class="toc">
-<ul>
-<li><a href="#linux学习3">Linux学习(3)</a><ul>
-<li><a href="#linux处理数据文件">Linux处理数据文件</a><ul>
-<li><a href="#排序sort命令">排序：sort命令</a></li>
-<li><a href="#搜索文件-grep">搜索文件: grep</a></li>
-<li><a href="#压缩数据">压缩数据</a></li>
-<li><a href="#归档数据">归档数据</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<h2 id="linux处理数据文件" style="user-select: auto;">Linux处理数据文件</h2>
-
-
-
-<h3 id="排序sort命令" style="user-select: auto;">排序：sort命令</h3>
-
-
-
-<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs stata" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">cat</span> file1 #查看file1: <span class="hljs-keyword" style="user-select: auto;">one</span> <span class="hljs-keyword" style="user-select: auto;">two</span> three four five
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">sort</span> file1 #five four <span class="hljs-keyword" style="user-select: auto;">one</span> three <span class="hljs-keyword" style="user-select: auto;">two</span>
-</div><div class="hljs-line" style="user-select: auto;">#默认情况下<span class="hljs-keyword" style="user-select: auto;">sort</span>命令会把数字当作字符执行标准的字符排序，需要加上-<span class="hljs-keyword" style="user-select: auto;">n</span>参数
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">sort</span> -<span class="hljs-keyword" style="user-select: auto;">n</span> file1 #<span class="hljs-keyword" style="user-select: auto;">sort</span>命令会把数字识别成数字而不是字符
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">sort</span> -<span class="hljs-keyword" style="user-select: auto;">M</span> file3 #含有时间戳的文件，-<span class="hljs-keyword" style="user-select: auto;">M</span>表示用三字符月份名按月份排序
-</div><div class="hljs-line" style="user-select: auto;">#<span class="hljs-keyword" style="user-select: auto;">sort</span>还有很多的参数：具体参考书籍
-</div><div class="hljs-line" style="user-select: auto;">du -<span class="hljs-keyword" style="user-select: auto;">sh</span> * | <span class="hljs-keyword" style="user-select: auto;">sort</span> -nr
-</div><div class="hljs-line" style="user-select: auto;">#-r参数指的是按照降序排列；|命令是将du命令输出重新定向到<span class="hljs-keyword" style="user-select: auto;">sort</span>命令
-</div></code></pre>
-        
-          <a class="article-more-a" href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux学习（2）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/">Linux学习（2）</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:11:33.930Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html><html><head><title>Linux学习（2）</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
-                        
-                    
-
-
-
-<h1 id="linux学习2" style="user-select: auto;">Linux学习（2）</h1>
-
-<p style="user-select: auto;">整理于2020年5月2日<a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
-
-</p><div><div class="toc" style="user-select: auto;"><div class="toc">
-<ul>
-<li><a href="#linux学习2">Linux学习（2）</a><ul>
-<li><a href="#过滤输出列表">过滤输出列表</a></li>
-<li><a href="#处理文件">处理文件</a><ul>
-<li><a href="#创建文件">创建文件</a></li>
-<li><a href="#复制文件">复制文件</a></li>
-<li><a href="#链接文件">链接文件</a></li>
-<li><a href="#重命名文件">重命名文件</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-
-<h2 id="过滤输出列表" style="user-select: auto;">过滤输出列表</h2>
-
-<p style="user-select: auto;"><code style="user-select: auto;">ls</code>命令可使用过滤器来决定应该在输出中显示哪些文件或目录。过滤器就是一个进行简单文本匹配的字符串，添加在命令行参数之后。</p>
-
-
-
-<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs bash" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> <span class="hljs-comment" style="user-select: auto;"># -l指的是using a long listing format</span>
-</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_script <span class="hljs-comment" style="user-select: auto;"># 不知道要找文件确切名称时，ls命令能够识别标准通配符，并在过滤器中用它们进行模式匹配</span>
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">##？问号代表一个字符，可用于过滤器字符串中替代任意位置的单个字符</span>
-</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_scr?pt
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">##* 星号代表零个或多个字符</span>
-</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my*
-</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">###[] 使用中括号</span>
-</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_scr[ai]pt<span class="hljs-comment" style="user-select: auto;">#使用[]以及特定位置上可能出现的两种字符a和i,可以列出字符位置上的多个可能选择</span>
-</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_scr[a-i]pt
-</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_f[a-i]ll <span class="hljs-comment" style="user-select: auto;">#会查找出a到i的文件</span>
-</div></code></pre>
-
-<p style="user-select: auto;">过滤器中使用星号和问号被称为文件扩展匹配file globbing。<u style="user-select: auto;">使用通配符进行模式匹配过程。通配符叫做元字符通配符</u></p>
-        
-          <a class="article-more-a" href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux 学习（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">Linux 学习（1）</a>
-    </h1>
   
 
-        
-        <a href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:11:10.538Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html><html><head><title>Linux 学习（1）</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
-                        
-                    
-
-
-
-<h1 id="linux-学习1" style="user-select: auto;">Linux 学习（1）</h1>
-
-<p style="user-select: auto;"></p>
-
-<p style="user-select: auto;">整理于2020年5月1日<a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
-
-</p><div><div class="toc" style="user-select: auto;"><div class="toc">
-<ul>
-<li><a href="#linux-学习1">Linux 学习（1）</a><ul>
-<li><a href="#基本bash命令">基本bash命令</a><ul>
-<li><a href="#启动bash-shell">启动bash shell</a></li>
-<li><a href="#shell提示符">shell提示符</a></li>
-<li><a href="#shell中的bash手册">shell中的bash手册</a></li>
-<li><a href="#浏览文件系统">浏览文件系统</a></li>
-<li><a href="#遍历目录">遍历目录</a></li>
-<li><a href="#文件和目录列表">文件和目录列表</a><ul>
-<li><a href="#显示长列表">显示长列表</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-
-<h2 id="基本bash命令" style="user-select: auto;">基本bash命令</h2>
-
-
-
-<h3 id="启动bash-shell" style="user-select: auto;">启动bash shell</h3>
-
-<p style="user-select: auto;">GNU bash shell 通常是在用户登录终端启动。登录时，系统启动的shell依赖于用户账户的设置</p>
-
-
-
-<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs awk" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-regexp" style="user-select: auto;">/etc/</span>password <span class="hljs-comment" style="user-select: auto;">#包含所有系统用户账户列表以及每个用户的基本配置信息</span>
-</div></code></pre>
-
-<p style="user-select: auto;">bash shell 自动启动，是否出现shell命令行界面(CLI)依赖于<em style="user-select: auto;">所使用的登录方式</em></p>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">使用虚拟控制台终端登录，CLI提示符$会自动出现 <br style="user-select: auto;">
-  通过图形化桌面环境登录Linux，需使用图形化终端仿真器来访问shell CLI提示符</p>
-</blockquote>
-        
-          <a class="article-more-a" href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-常用统计方法学习（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">常用统计方法学习（1）</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:10:51.811Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html><html><head><title>常用统计方法学习（1）</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
-                        
-                    
-
-
-
-<h1 id="常用统计方法学习1" style="user-select: auto;">常用统计方法学习（1）</h1>
-
-<p style="user-select: auto;"> <br style="user-select: auto;">
-<strong style="user-select: auto;">写于2020年4月30日</strong><a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
-
-</p><div><div class="toc" style="user-select: auto;"><div class="toc">
-<ul>
-<li><a href="#常用统计方法学习1">常用统计方法学习（1）</a><ul>
-<li><a href="#一般线性模型方差分析和线性回归的统一">一般线性模型——方差分析和线性回归的统一</a></li>
-<li><a href="#广义线性模型线性回归与logistic回归的统一">广义线性模型——线性回归与logistic回归的统一</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-
-<h2 id="一般线性模型方差分析和线性回归的统一" style="user-select: auto;">一般线性模型——方差分析和线性回归的统一</h2>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">一般线性模型并不是一个具体的模型，而是多种方法的统称，t检验、方差分析、线性回归都属于一般线性模型。</p>
-</blockquote>
-
-
-
-<p style="user-select: auto;"></p><div xmlns="http://www.w3.org/1999/xhtml" class="" rel="bc5bb640fd31fcbb4714d746877e0074" style="user-select: auto;"><div class="MathJax_SVG_Display" role="textbox" aria-readonly="true" style="text-align: center; user-select: auto;"><span style="font-size: 100%; display: inline-block; user-select: auto;" class="MathJax_SVG" id="MathJax-Element-97-Frame"><span><img type="image/png" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;" width="359" height="18"></span></span></div></div>
-<code style="user-select: auto;">y</code>为因变量或结局变量，<code style="user-select: auto;">x1...</code>为自变量或解释变量<p style="user-select: auto;"></p>
-
-<p style="user-select: auto;">在一般线性模型中，因变量<strong style="user-select: auto;">必须是定量的</strong>，而自变量既可以是定量的，也可以是分类的。</p>
-
-<table style="user-select: auto;"><tbody style="user-select: auto;"><tr style="font-weight: bold; user-select: auto;">  <td style="user-select: auto;" align="left">自变量个数及类型</td>  <td style="user-select: auto;" align="right">一般线性模型具体方法</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">1个二分类变量</td>  <td style="user-select: auto;" align="right">t检验</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">1个多分类变量</td>  <td style="user-select: auto;" align="right">方差分析</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">2个或多个分类变量</td>  <td style="user-select: auto;" align="right">多因素方差分析</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">1个连续变量</td>  <td style="user-select: auto;" align="right">单因素线性回归</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">多个连续变量</td>  <td style="user-select: auto;" align="right">多因素线性回归</td></tr><tr style="user-select: auto;">  <td style="user-select: auto;" align="left">1个连续变量、1个分类变量</td>  <td style="user-select: auto;" align="right">协方差分析</td></tr></tbody></table>
-        
-          <a class="article-more-a" href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-什么是参数估计？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/">什么是参数估计？</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:02:50.690Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html><html><head><title>什么是参数估计？</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
-                        
-                    
-
-
-
-<h1 id="什么是参数估计" style="user-select: auto;">什么是参数估计？</h1>
-
-<p style="user-select: auto;">写于2020年5月3日<a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
-
-</p><div><div class="toc" style="user-select: auto;"><div class="toc">
-<ul>
-<li><a href="#什么是参数估计">什么是参数估计？</a><ul>
-<li><a href="#1点估计">1.点估计</a></li>
-<li><a href="#2最小二乘估计">2.最小二乘估计</a><ul>
-<li><a href="#最小绝对值估计">最小绝对值估计</a></li>
-</ul>
-</li>
-<li><a href="#3最大似然估计">3.最大似然估计</a></li>
-<li><a href="#4贝叶斯估计">4.贝叶斯估计</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">参数估计：现实中样本统计量估计总体参数</p>
-</blockquote>
-
-<p style="user-select: auto;">🎈几种估计方法：</p>
-
-
-
-<h2 id="1点估计" style="user-select: auto;">1.点估计</h2>
-
-<p style="user-select: auto;">根据中心极限定理，多次重复抽样，所得多个统计量应该围绕总体参数波动，多个统计量的均数应该等于总体参数。每个样本的统计量不可能正好等于总体参数，所以采用置信区间估计更可靠一些</p>
-
-
-
-<h2 id="2最小二乘估计" style="user-select: auto;">2.最小二乘估计</h2>
-
-<p style="user-select: auto;">主要用于线性回归的参数估计，求实际值与模型估计值之差达到最小的值，将其作为参数估计值。</p>
-
-
-
-<h3 id="最小绝对值估计" style="user-select: auto;">最小绝对值估计</h3>
-        
-          <a class="article-more-a" href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -1274,8 +843,8 @@ library(tidyverse)</code></pre>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
