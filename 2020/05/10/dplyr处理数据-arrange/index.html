@@ -6,15 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/5 | keyongbio</title>
+  <title>dplyr处理数据-arrange | keyongbio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Day Day Study">
-<meta property="og:type" content="website">
-<meta property="og:title" content="keyongbio">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2020&#x2F;05&#x2F;index.html">
+  <meta name="description" content="dplyr处理数据 (2)                                                  dplyr处理数据 (2)  写于2020年5月10日1    dplyr处理数据 (2) 使用arrange()排列行 select()选择列 rename()函数 mutate()添加新变量 常用创建函数          使用arrange()排列行  arrange">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dplyr处理数据-arrange">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;10&#x2F;dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-arrange&#x2F;index.html">
 <meta property="og:site_name" content="keyongbio">
-<meta property="og:description" content="Day Day Study">
+<meta property="og:description" content="dplyr处理数据 (2)                                                  dplyr处理数据 (2)  写于2020年5月10日1    dplyr处理数据 (2) 使用arrange()排列行 select()选择列 rename()函数 mutate()添加新变量 常用创建函数          使用arrange()排列行  arrange">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-10T05:19:27.802Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="keyongbio" type="application/atom+xml">
@@ -143,238 +144,323 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-dplyr处理数据-arrange" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      dplyr处理数据-arrange
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-arrange/" class="archive-article-date">
+
+        
+        <a href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-arrange/" class="archive-article-date">
   	<time datetime="2020-05-10T05:18:21.093Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-arrange/">dplyr处理数据-arrange</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html><html><head><title>dplyr处理数据 (2)</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
 
-        <div class="article-info info-on-right">
-          
-          
 
+
+<h1 id="dplyr处理数据-2" style="user-select: auto;">dplyr处理数据 (2)</h1>
+
+<p style="user-select: auto;">写于2020年5月10日<a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
+
+</p><div><div class="toc" style="user-select: auto;"><div class="toc">
+<ul>
+<li><a href="#dplyr处理数据-2">dplyr处理数据 (2)</a><ul>
+<li><a href="#使用arrange排列行">使用arrange()排列行</a></li>
+<li><a href="#select选择列">select()选择列</a></li>
+<li><a href="#rename函数">rename()函数</a></li>
+<li><a href="#mutate添加新变量">mutate()添加新变量</a></li>
+<li><a href="#常用创建函数">常用创建函数</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h2 id="使用arrange排列行" style="user-select: auto;">使用arrange()排列行</h2>
+
+<p style="user-select: auto;">arrange() 函数的工作方式与filter()函数相似，前者不是选择行，而是改变行的顺序。它接受<u style="user-select: auto;">①一个数据框和②一组作为排序依据的列名作为参数</u>。如果列名不止一个，那么就使用后面的列在前面排序的基础上继续排序。</p>
+
+<a id="more"></a>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs excel" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">arrange(flights, <span class="hljs-built_in" style="user-select: auto;">year</span>, <span class="hljs-built_in" style="user-select: auto;">month</span>, <span class="hljs-built_in" style="user-select: auto;">day</span>)
+</div><div class="hljs-line" style="user-select: auto;">#依次按照<span class="hljs-built_in" style="user-select: auto;">year</span>, <span class="hljs-built_in" style="user-select: auto;">month</span>, <span class="hljs-built_in" style="user-select: auto;">day</span>进行排序
+</div><div class="hljs-line" style="user-select: auto;">#desc()可以降序
+</div><div class="hljs-line" style="user-select: auto;">arrange(flights, desc(arr_delay))
+</div></code></pre>
+
+<p style="user-select: auto;"><strong style="user-select: auto;">Note</strong>: 缺失值总是排在最后</p>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs lisp" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">df &lt;- tibble(<span class="hljs-name" style="user-select: auto;">x</span> = c(<span class="hljs-number" style="user-select: auto;">5</span>, <span class="hljs-number" style="user-select: auto;">2</span>, NA))
+</div><div class="hljs-line" style="user-select: auto;">arrange(<span class="hljs-name" style="user-select: auto;">df</span>, x)
+</div><div class="hljs-line" style="user-select: auto;">arrange(<span class="hljs-name" style="user-select: auto;">df</span>, desc(<span class="hljs-name" style="user-select: auto;">x</span>))
+</div></code></pre>
+
+<p style="user-select: auto;">📌：如何使用arrange()函数将缺失值排在最前面？–提示使用is.na()函数</p>
+
+
+
+<h2 id="select选择列" style="user-select: auto;">select()选择列</h2>
+
+<p style="user-select: auto;">select()函数对于航班数据不是特别有用，因为其中只有19个变量，但可以通过这个数据集了解select()函数的用法：</p>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs vbscript" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"># 按名称选择列
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">select</span>(flights, <span class="hljs-built_in" style="user-select: auto;">year</span>, <span class="hljs-built_in" style="user-select: auto;">month</span>, <span class="hljs-built_in" style="user-select: auto;">day</span>)
+</div><div class="hljs-line" style="user-select: auto;"># 选择<span class="hljs-built_in" style="user-select: auto;">year</span>和<span class="hljs-built_in" style="user-select: auto;">day</span>之间的所有列
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">select</span>(flights, <span class="hljs-built_in" style="user-select: auto;">year</span>:<span class="hljs-built_in" style="user-select: auto;">day</span>)
+</div><div class="hljs-line" style="user-select: auto;"># 选择不在<span class="hljs-built_in" style="user-select: auto;">year</span>和<span class="hljs-built_in" style="user-select: auto;">day</span>之间的所有列
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-keyword" style="user-select: auto;">select</span>(flights, -(<span class="hljs-built_in" style="user-select: auto;">year</span>:<span class="hljs-built_in" style="user-select: auto;">day</span>))
+</div><div class="hljs-line" style="user-select: auto;"><wbr style="user-select: auto;">
+</div></code></pre>
+
+<p style="user-select: auto;">可以在select()函数使用一些辅助函数</p>
+
+<ul style="user-select: auto;"><li style="user-select: auto;"><p style="user-select: auto;">starts_with(“abc”): 匹配以abc开头的名称</p></li>
+<li style="user-select: auto;"><p style="user-select: auto;">ends_with(“xyz”): 匹配以xyz结尾的名词</p></li>
+<li style="user-select: auto;"><p style="user-select: auto;">contains(“ijk”): 匹配包含ijk的名词</p></li>
+<li style="user-select: auto;"><p style="user-select: auto;">match(“(.)//1”): 选择匹配正则表达式的那些变量。正则表达式会匹配名称中有重复字符的变量。</p></li>
+<li style="user-select: auto;"><p style="user-select: auto;">num_range(“x”, 1:3): 匹配x1, x2和x3</p></li>
+</ul>
+
+
+
+<h2 id="rename函数" style="user-select: auto;">rename()函数</h2>
+
+<p style="user-select: auto;">🍗重命名变量</p>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs stylus" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-function" style="user-select: auto;"><span class="hljs-title" style="user-select: auto;">rename</span><span class="hljs-params" style="user-select: auto;">(flights, tail_num = tailnum)</span></span>
+</div></code></pre>
+
+<p style="user-select: auto;">🍗select()函数和everything()辅助函数结合使用。当想要将几个变量移到数据框开头时。</p>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs lisp" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">select(<span class="hljs-name" style="user-select: auto;">flights</span>, time_hour, air_time, everything())
+</div></code></pre>
+
+<p style="user-select: auto;">📌one_of()函数的作用是什么？</p>
+
+
+
+<h2 id="mutate添加新变量" style="user-select: auto;">mutate()添加新变量</h2>
+
+<p style="user-select: auto;">Rstudio中，查看所有列的最简单方法是使用view()函数</p>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs lisp" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">flights_sml &lt;- select(<span class="hljs-name" style="user-select: auto;">flights</span>,year<span class="hljs-symbol" style="user-select: auto;">:day</span>, 
+</div><div class="hljs-line" style="user-select: auto;">                      ends_With(<span class="hljs-string" style="user-select: auto;">"delay"</span>),
+</div><div class="hljs-line" style="user-select: auto;">                      distance,
+</div><div class="hljs-line" style="user-select: auto;">                      air_time)
+</div><div class="hljs-line" style="user-select: auto;">mutate(<span class="hljs-name" style="user-select: auto;">flights_sml</span>,
+</div><div class="hljs-line" style="user-select: auto;">    gain = arr_delay - dep_delay,
+</div><div class="hljs-line" style="user-select: auto;">    speed = distance / air_time * 60)           
+</div></code></pre>
+
+<p style="user-select: auto;">一旦创建，新列可以立即使用。</p>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs nix" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">mutat(flights_sml,
+</div><div class="hljs-line" style="user-select: auto;">    <span class="hljs-attr" style="user-select: auto;">gain</span> = arr_delay - dep_delay,
+</div><div class="hljs-line" style="user-select: auto;">    <span class="hljs-attr" style="user-select: auto;">hours</span> = air_time / <span class="hljs-number" style="user-select: auto;">60</span>,
+</div><div class="hljs-line" style="user-select: auto;">    <span class="hljs-attr" style="user-select: auto;">gain_per_hour</span> = gain / hours)
+</div><div class="hljs-line" style="user-select: auto;"><wbr style="user-select: auto;">
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;"># 如果保留新变量， 使用transmute()函数</span>
+</div><div class="hljs-line" style="user-select: auto;">transmute(flights,
+</div><div class="hljs-line" style="user-select: auto;">    <span class="hljs-attr" style="user-select: auto;">gain</span> = arr_delay - dep_delay,
+</div><div class="hljs-line" style="user-select: auto;">    <span class="hljs-attr" style="user-select: auto;">hours</span> = air_time / <span class="hljs-number" style="user-select: auto;">60</span>,
+</div><div class="hljs-line" style="user-select: auto;">    <span class="hljs-attr" style="user-select: auto;">gain_per_hour</span> = gain / hours)
+</div></code></pre>
+
+
+
+<h2 id="常用创建函数" style="user-select: auto;">常用创建函数</h2>
+
+<p style="user-select: auto;">创建新变量的多种函数可供mutate()一同使用。最重要的一点是，这种函数必须是向量化的：它必须<strong style="user-select: auto;">接受一个向量</strong>作为输入，并返回<strong style="user-select: auto;">一个向量作为输出</strong>，而且输入向量与输出向量具有同样数目的分量。</p>
+
+<p style="user-select: auto;">算术运算符另一个用途：x / sum(x) 可以计算出各个分量在总数中的比例， y - mean(y) 可以计算出分量与均值之间的差值。</p>
+
+<ul style="user-select: auto;"><li style="user-select: auto;"><p style="user-select: auto;"><strong style="user-select: auto;">模运算符</strong> <code style="user-select: auto;">%/%</code> <code style="user-select: auto;">%%</code> <br style="user-select: auto;">
+%/% 整数除法。 %%求余 <br style="user-select: auto;">
+模运算符非常好用：可以拆分整数。</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs excel" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">transmute(flights,
+</div><div class="hljs-line" style="user-select: auto;">    dep_time,
+</div><div class="hljs-line" style="user-select: auto;">    <span class="hljs-built_in" style="user-select: auto;">hour</span> = dep_time / <span class="hljs-number" style="user-select: auto;">100</span>,
+</div><div class="hljs-line" style="user-select: auto;">    <span class="hljs-built_in" style="user-select: auto;">minute</span> = dep_time / <span class="hljs-number" style="user-select: auto;">100</span>)
+</div></code></pre>
+
+<ul style="user-select: auto;"><li style="user-select: auto;"><p style="user-select: auto;"><strong style="user-select: auto;">对数函数</strong> log()、log2()、log10()函数</p></li>
+<li style="user-select: auto;"><p style="user-select: auto;"><strong style="user-select: auto;">偏移函数</strong> lead()、lag()函数 <br style="user-select: auto;">
+可以返回一个序列的领先值和滞后值。可以计算出序列的移动差值： x - lag(x) <br style="user-select: auto;">
+或发现序列何时发生了变化(x != lag(x))。 结合group_by()组合使用。</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs lisp" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">(<span class="hljs-name" style="user-select: auto;">x</span> &lt;- <span class="hljs-number" style="user-select: auto;">1</span>:<span class="hljs-number" style="user-select: auto;">10</span>)
+</div><div class="hljs-line" style="user-select: auto;">lag(<span class="hljs-name" style="user-select: auto;">x</span>)
+</div><div class="hljs-line" style="user-select: auto;">lead(<span class="hljs-name" style="user-select: auto;">x</span>)
+</div></code></pre>
+
+<ul style="user-select: auto;"><li style="user-select: auto;"><p style="user-select: auto;"><strong style="user-select: auto;">累加和滚动聚合</strong> <br style="user-select: auto;">
+计算累加积、累加和、累加最小值、累加最大值的函数。cumsum()、cumprod()、 cummin()、cummax() <br style="user-select: auto;">
+dplyr还提供 <code style="user-select: auto;">cummean()</code>函数以计算累加均值。如果想要计算滚动聚合（滚动窗口求和），可以尝试使用RcppRoll包</p></li>
+<li style="user-select: auto;"><p style="user-select: auto;"><strong style="user-select: auto;">排秩</strong> <br style="user-select: auto;">
+排秩函数有很多，从min_rank()函数开始，它可以完成最常用的排秩任务（第一、第二、第三、第四）。默认的排序方式是，<strong style="user-select: auto;">最小的值获得最前面的名次</strong>，使用desc(x) 可以<strong style="user-select: auto;">让最大的值获得最前面的名次</strong>。</p></li>
+</ul>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs lisp" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">y &lt;- c(<span class="hljs-number" style="user-select: auto;">1</span>,<span class="hljs-number" style="user-select: auto;">2</span>,<span class="hljs-number" style="user-select: auto;">2</span>,NA,<span class="hljs-number" style="user-select: auto;">3</span>,<span class="hljs-number" style="user-select: auto;">4</span>)
+</div><div class="hljs-line" style="user-select: auto;">min_rank(<span class="hljs-name" style="user-select: auto;">y</span>)
+</div><div class="hljs-line" style="user-select: auto;">min_rank(<span class="hljs-name" style="user-select: auto;">desc</span>(<span class="hljs-name" style="user-select: auto;">y</span>))
+</div></code></pre>
+
+<p style="user-select: auto;">如果min_rank()无法满足需要，那么可以看一下其变体 row_number()、dense_rank()、percent_rank()、cume_dist()和ntile()</p>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs stylus" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;"><span class="hljs-function" style="user-select: auto;"><span class="hljs-title" style="user-select: auto;">row_number</span><span class="hljs-params" style="user-select: auto;">(y)</span></span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-function" style="user-select: auto;"><span class="hljs-title" style="user-select: auto;">dense_rank</span><span class="hljs-params" style="user-select: auto;">(y)</span></span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-function" style="user-select: auto;"><span class="hljs-title" style="user-select: auto;">percent_rank</span><span class="hljs-params" style="user-select: auto;">(y)</span></span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-function" style="user-select: auto;"><span class="hljs-title" style="user-select: auto;">cume_dist</span><span class="hljs-params" style="user-select: auto;">(y)</span></span>
+</div></code></pre>
+
+<div class="footnotes"><hr><ol><li id="fn:demo">本文是学习R for Data Science中的章节。上一篇用的Rmarkdown写的，文件大小有些大，还是换成markdown格式好了。另外，打字有时候会上瘾，打的又快还容易出错。 <a href="#fnref:demo" title="Return to article" class="reversefootnote">↩</a></li></ol></div></div></body></html>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-arrange/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter/" class="archive-article-date">
-  	<time datetime="2020-05-09T16:58:22.891Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">dplyr处理数据-filter</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter/">dplyr处理数据-filter</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/08/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E5%BE%AA%E7%8E%AF%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-05-08T07:54:05.457Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/08/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E5%BE%AA%E7%8E%AF%E5%87%BD%E6%95%B0/">R语言学习-循环函数</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/" class="archive-article-date">
-  	<time datetime="2020-05-05T14:07:25.126Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/">Linux学习 (3)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:11:33.930Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/">Linux学习（2）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:11:10.538Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">Linux 学习（1）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:10:51.811Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">常用统计方法学习（1）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:02:50.690Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/">什么是参数估计？</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -398,8 +484,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
