@@ -6,15 +6,16 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/5 | keyongbio</title>
+  <title>R markdown 小记 | keyongbio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Day Day Study">
-<meta property="og:type" content="website">
-<meta property="og:title" content="keyongbio">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2020&#x2F;05&#x2F;index.html">
+  <meta name="description" content="1. R markdown 小记写于2020年5月29日^demo @keyongbio [toc] Knitr -&amp;gt; md -&amp;gt;pandoc 12#执行一个Rmarkdown文件rmarkdown::render(&quot;Example03_HelloRmarkDown.Rmd&quot;,&quot;html_document&quot;)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R markdown 小记">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;05&#x2F;30&#x2F;R%20markdown%20%E5%B0%8F%E8%AE%B0&#x2F;index.html">
 <meta property="og:site_name" content="keyongbio">
-<meta property="og:description" content="Day Day Study">
+<meta property="og:description" content="1. R markdown 小记写于2020年5月29日^demo @keyongbio [toc] Knitr -&amp;gt; md -&amp;gt;pandoc 12#执行一个Rmarkdown文件rmarkdown::render(&quot;Example03_HelloRmarkDown.Rmd&quot;,&quot;html_document&quot;)">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-05-30T09:53:50.875Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="keyongbio" type="application/atom+xml">
@@ -143,295 +144,204 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-R markdown 小记" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      R markdown 小记
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/30/R%20markdown%20%E5%B0%8F%E8%AE%B0/" class="archive-article-date">
+
+        
+        <a href="/2020/05/30/R%20markdown%20%E5%B0%8F%E8%AE%B0/" class="archive-article-date">
   	<time datetime="2020-05-30T09:44:28.172Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/30/R%20markdown%20%E5%B0%8F%E8%AE%B0/">R markdown 小记</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-R-markdown-小记"><a href="#1-R-markdown-小记" class="headerlink" title="1. R markdown 小记"></a>1. R markdown 小记</h2><p>写于2020年5月29日<a href="总结最近学习的部分Rmarkdown生成报告的方法。">^demo</a></p>
+<p>@keyongbio</p>
+<p>[toc]</p>
+<p>Knitr -&gt; md -&gt;pandoc</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#执行一个Rmarkdown文件</span></span><br><span class="line">rmarkdown::render(<span class="string">"Example03_HelloRmarkDown.Rmd"</span>,<span class="string">"html_document"</span>)</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<a id="more"></a>
 
+<p><strong>代码块参数</strong></p>
+<ul>
+<li>include: 是否在输出文件中显示代码和运行结果</li>
+<li>eval: 是否计算代码块中内容的选项：T或F</li>
+<li>echo: 是否输出文本选项</li>
+<li>warning: 是否输出警告信息</li>
+<li>fig.cap = ‘…’: 为图添加标题</li>
+<li>message: 是否在输出中包含参考信息</li>
+<li>error: 是否在输出中包含错误信息</li>
+<li>fig.width: 图片宽度</li>
+<li>fig.height: 图片高度</li>
+<li>results: 是否输出原生结果</li>
+</ul>
+<p>Note:</p>
+<blockquote>
+<p>插入代码块快捷键： Ctrl + Alt +I</p>
+</blockquote>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#代码块举例</span></span><br><span class="line"><span class="comment">##绘图</span></span><br><span class="line">```&#123;r icu_los_day, echo= FALSE&#125;</span><br><span class="line">qplot(aline_data$icu_los_day, geom = "histogram", binwidth = 1, main = "Length of stay in the ICU", xlab = "Length of Stay, days",fill=I("#9ebcda"),col=I("#FFFFFF"))</span><br><span class="line">```</span><br><span class="line"><span class="comment">##插入表格</span></span><br><span class="line">```&#123;r tables-aline&#125;</span><br><span class="line">knitr::kable(abline_data[1:5,1:5], caption = 'A Sample of Table')</span><br><span class="line">```</span><br><span class="line"><span class="comment">##插入图像</span></span><br><span class="line">```&#123;r, out.width = '100%', fig.align = 'center', fig.cap = 'China', echo =F&#125;</span><br><span class="line">knitr::include_graphics('images/banner_imicams.gif')</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-创建动态报告"><a href="#2-创建动态报告" class="headerlink" title="2. 创建动态报告"></a>2. 创建动态报告</h2><blockquote>
+<p>三种情况：</p>
+<p>👀创建一个含有代码和结果的报告，可以重做之前的任务</p>
+<p>👀为老师等创建一份报告</p>
+<p>👀为日常需求创建一份特定类型的报告</p>
+</blockquote>
+<p>动态文档和可重复性研究</p>
+<h3 id="2-1-用模板生成报告"><a href="#2-1-用模板生成报告" class="headerlink" title="2.1. 用模板生成报告"></a>2.1. 用模板生成报告</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(rmarkdown)</span><br><span class="line">render(example.Rmd, <span class="string">"html_document"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>模板文件包括：</p>
+<ul>
+<li>报告文字</li>
+<li>格式化语法</li>
+<li>R代码</li>
+</ul>
+<h3 id="2-2-R和Markdown创建动态报告"><a href="#2-2-R和Markdown创建动态报告" class="headerlink" title="2.2. R和Markdown创建动态报告"></a>2.2. R和Markdown创建动态报告</h3><p><strong>步骤：</strong></p>
+<ul>
+<li><p>安装rmarkdown包</p>
+</li>
+<li><p>安装xtable包</p>
+</li>
+<li><p>安装Pandoc包：Pandoc将一种标记格式文件转换成另一种标记格式</p>
+</li>
+<li><p>若需要生成PDF文档，需安装<code>LaTeX</code>编译器; Windows可以安装<code>MiKTeX</code>,Linux可以安装<code>TeXLive</code>。</p>
+</li>
+</ul>
+<blockquote>
+<p><code>xtable()</code>函数格式化回归结果</p>
+</blockquote>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">```&#123;r echo = FALSE, results = 'asis'&#125;</span><br><span class="line">library(xtable)</span><br><span class="line">print(xtable(sift), type = 'html', html.table.attributes = "border = 0")</span><br><span class="line">## sift为对象</span><br><span class="line">##若输出PDF文件</span><br><span class="line">print(xtable(sfit), typr = "latex")</span><br><span class="line">library(rmarkdown)</span><br><span class="line">render('XXX.Rmd',"pdf_document")</span><br><span class="line">##可以使用ktable()代替xtable(),生成word文档</span><br><span class="line">library(knitr)</span><br><span class="line">kable(sfit$coefficients)</span><br><span class="line">library(rmarkdown)</span><br><span class="line">render("XXX.Rmd", "Word_document")</span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<p>Note: <code>xtable()</code>函数可以处理<code>lm()</code>对象，<code>kable()</code>函数只能处理矩阵和数据框。</p>
+<h3 id="2-3-Markdown语法"><a href="#2-3-Markdown语法" class="headerlink" title="2.3.Markdown语法"></a>2.3.Markdown语法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[Google](http://google.com)</span><br><span class="line">![My text](path to image)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-R和LaTex创建动态报告"><a href="#2-4-R和LaTex创建动态报告" class="headerlink" title="2.4.  R和LaTex创建动态报告"></a>2.4.  R和LaTex创建动态报告</h3><p><a href="http://mng.bz/45vP" target="_blank" rel="noopener">参考内容</a>[LaTex学习网站]</p>
+<p>构建.Rnw的文件</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">library</span>(knitr)</span><br><span class="line">knit(<span class="string">"XXX.Rnw"</span>)</span><br><span class="line"><span class="comment">#或者使用knit2pdf()处理文本文件</span></span><br></pre></td></tr></table></figure>
+
+<p>R代码块以分隔符&lt;<options>&gt;=开始，以@结尾，行内代码可用<code>\Sexpr{R code}</code>包含</p>
+<h3 id="2-5-R和Open-Document创建动态报告"><a href="#2-5-R和Open-Document创建动态报告" class="headerlink" title="2.5. R和Open Document创建动态报告"></a>2.5. R和Open Document创建动态报告</h3><p>ODF是开源的，基于XML的文件格式</p>
+<p>odfWeave, odfTable函数</p>
+<h3 id="2-6-R和Microsoft-Word-创建动态报告"><a href="#2-6-R和Microsoft-Word-创建动态报告" class="headerlink" title="2.6. R和Microsoft Word 创建动态报告"></a>2.6. R和Microsoft Word 创建动态报告</h3><p>使用<strong>R2wd包</strong>创建把R代码嵌入Word中，还需要安装RDCOMClient包</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">install.packages(RDCOMClient_0.93-<span class="number">0.</span>tar.gz, repos = <span class="literal">NULL</span>, type = <span class="string">"source"</span>)</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/30/R%20markdown%20%E5%B0%8F%E8%AE%B0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/20/R%E4%B8%AD%E5%AE%9E%E7%8E%B0Logistic%E5%9B%9E%E5%BD%92/" class="archive-article-date">
-  	<time datetime="2020-05-20T03:41:55.466Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2020/05/20/R%E4%B8%AD%E5%AE%9E%E7%8E%B0Logistic%E5%9B%9E%E5%BD%92/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">R中实现Logistic回归</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/20/R%E4%B8%AD%E5%AE%9E%E7%8E%B0Logistic%E5%9B%9E%E5%BD%92/">R中实现Logistic回归</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/20/R%E8%AF%AD%E8%A8%80%E5%AE%9E%E6%88%98%20(1)/" class="archive-article-date">
-  	<time datetime="2020-05-20T03:39:59.960Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/20/R%E8%AF%AD%E8%A8%80%E5%AE%9E%E6%88%98%20(1)/">R语言实战 (1)</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-arrange/" class="archive-article-date">
-  	<time datetime="2020-05-10T05:18:21.093Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-arrange/">dplyr处理数据-arrange</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter/" class="archive-article-date">
-  	<time datetime="2020-05-09T16:58:22.891Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/10/dplyr%E5%A4%84%E7%90%86%E6%95%B0%E6%8D%AE-filter/">dplyr处理数据-filter</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/08/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E5%BE%AA%E7%8E%AF%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2020-05-08T07:54:05.457Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/08/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0-%E5%BE%AA%E7%8E%AF%E5%87%BD%E6%95%B0/">R语言学习-循环函数</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/" class="archive-article-date">
-  	<time datetime="2020-05-05T14:07:25.126Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/05/Linux%E5%AD%A6%E4%B9%A0%20(3)/">Linux学习 (3)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:11:33.930Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/">Linux学习（2）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:11:10.538Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/Linux%20%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">Linux 学习（1）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:10:51.811Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/05/03/%E5%B8%B8%E7%94%A8%E7%BB%9F%E8%AE%A1%E6%96%B9%E6%B3%95%E5%AD%A6%E4%B9%A0%EF%BC%881%EF%BC%89/">常用统计方法学习（1）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/05/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/05/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -456,8 +366,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

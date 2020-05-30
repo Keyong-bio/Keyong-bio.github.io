@@ -145,6 +145,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-R markdown 小记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/30/R%20markdown%20%E5%B0%8F%E8%AE%B0/">R markdown 小记</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/30/R%20markdown%20%E5%B0%8F%E8%AE%B0/" class="archive-article-date">
+  	<time datetime="2020-05-30T09:44:28.172Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-R-markdown-小记"><a href="#1-R-markdown-小记" class="headerlink" title="1. R markdown 小记"></a>1. R markdown 小记</h2><p>写于2020年5月29日<a href="总结最近学习的部分Rmarkdown生成报告的方法。">^demo</a></p>
+<p>@keyongbio</p>
+<p>[toc]</p>
+<p>Knitr -&gt; md -&gt;pandoc</p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#执行一个Rmarkdown文件</span></span><br><span class="line">rmarkdown::render(<span class="string">"Example03_HelloRmarkDown.Rmd"</span>,<span class="string">"html_document"</span>)</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/05/30/R%20markdown%20%E5%B0%8F%E8%AE%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/30/R%20markdown%20%E5%B0%8F%E8%AE%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-R中实现Logistic回归" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1098,118 +1167,10 @@
 
 
   
-    <article id="post-什么是参数估计？" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/">什么是参数估计？</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/" class="archive-article-date">
-  	<time datetime="2020-05-03T03:02:50.690Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!DOCTYPE html><html><head><title>什么是参数估计？</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
-                        
-                    
-
-
-
-<h1 id="什么是参数估计" style="user-select: auto;">什么是参数估计？</h1>
-
-<p style="user-select: auto;">写于2020年5月3日<a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
-
-</p><div><div class="toc" style="user-select: auto;"><div class="toc">
-<ul>
-<li><a href="#什么是参数估计">什么是参数估计？</a><ul>
-<li><a href="#1点估计">1.点估计</a></li>
-<li><a href="#2最小二乘估计">2.最小二乘估计</a><ul>
-<li><a href="#最小绝对值估计">最小绝对值估计</a></li>
-</ul>
-</li>
-<li><a href="#3最大似然估计">3.最大似然估计</a></li>
-<li><a href="#4贝叶斯估计">4.贝叶斯估计</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-<blockquote style="user-select: auto;">
-  <p style="user-select: auto;">参数估计：现实中样本统计量估计总体参数</p>
-</blockquote>
-
-<p style="user-select: auto;">🎈几种估计方法：</p>
-
-
-
-<h2 id="1点估计" style="user-select: auto;">1.点估计</h2>
-
-<p style="user-select: auto;">根据中心极限定理，多次重复抽样，所得多个统计量应该围绕总体参数波动，多个统计量的均数应该等于总体参数。每个样本的统计量不可能正好等于总体参数，所以采用置信区间估计更可靠一些</p>
-
-
-
-<h2 id="2最小二乘估计" style="user-select: auto;">2.最小二乘估计</h2>
-
-<p style="user-select: auto;">主要用于线性回归的参数估计，求实际值与模型估计值之差达到最小的值，将其作为参数估计值。</p>
-
-
-
-<h3 id="最小绝对值估计" style="user-select: auto;">最小绝对值估计</h3>
-        
-          <a class="article-more-a" href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/03/%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%82%E6%95%B0%E4%BC%B0%E8%AE%A1%EF%BC%9F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
