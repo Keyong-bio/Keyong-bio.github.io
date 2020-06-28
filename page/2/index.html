@@ -145,6 +145,119 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux学习（2）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/">Linux学习（2）</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-05-03T03:11:33.930Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html><html><head><title>Linux学习（2）</title><meta charset='utf-8'><link href='https://d31qtcb7c58z3n.cloudfront.net/res-min/themes/marxico.css' rel='stylesheet'><style></style><meta name="generator" content="Hexo 4.0.0"></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h1 id="linux学习2" style="user-select: auto;">Linux学习（2）</h1>
+
+<p style="user-select: auto;">整理于2020年5月2日<a href="#fn:demo" id="fnref:demo" title="See footnote" class="footnote" style="user-select: auto;">1</a>
+
+</p><div><div class="toc" style="user-select: auto;"><div class="toc">
+<ul>
+<li><a href="#linux学习2">Linux学习（2）</a><ul>
+<li><a href="#过滤输出列表">过滤输出列表</a></li>
+<li><a href="#处理文件">处理文件</a><ul>
+<li><a href="#创建文件">创建文件</a></li>
+<li><a href="#复制文件">复制文件</a></li>
+<li><a href="#链接文件">链接文件</a></li>
+<li><a href="#重命名文件">重命名文件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<h2 id="过滤输出列表" style="user-select: auto;">过滤输出列表</h2>
+
+<p style="user-select: auto;"><code style="user-select: auto;">ls</code>命令可使用过滤器来决定应该在输出中显示哪些文件或目录。过滤器就是一个进行简单文本匹配的字符串，添加在命令行参数之后。</p>
+
+
+
+<pre class="prettyprint hljs-dark" style="user-select: auto;"><code class="hljs bash" style="user-select: auto;"><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> <span class="hljs-comment" style="user-select: auto;"># -l指的是using a long listing format</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_script <span class="hljs-comment" style="user-select: auto;"># 不知道要找文件确切名称时，ls命令能够识别标准通配符，并在过滤器中用它们进行模式匹配</span>
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">##？问号代表一个字符，可用于过滤器字符串中替代任意位置的单个字符</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_scr?pt
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">##* 星号代表零个或多个字符</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my*
+</div><div class="hljs-line" style="user-select: auto;"><span class="hljs-comment" style="user-select: auto;">###[] 使用中括号</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_scr[ai]pt<span class="hljs-comment" style="user-select: auto;">#使用[]以及特定位置上可能出现的两种字符a和i,可以列出字符位置上的多个可能选择</span>
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_scr[a-i]pt
+</div><div class="hljs-line" style="user-select: auto;">ls <span class="hljs-_" style="user-select: auto;">-l</span> my_f[a-i]ll <span class="hljs-comment" style="user-select: auto;">#会查找出a到i的文件</span>
+</div></code></pre>
+
+<p style="user-select: auto;">过滤器中使用星号和问号被称为文件扩展匹配file globbing。<u style="user-select: auto;">使用通配符进行模式匹配过程。通配符叫做元字符通配符</u></p>
+        
+          <a class="article-more-a" href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/Linux%E5%AD%A6%E4%B9%A0%EF%BC%882%EF%BC%89/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Linux 学习（1）" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
